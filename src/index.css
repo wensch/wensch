@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 3%;
+    --foreground: 0 0% 98%;
+    --primary: 267 100% 61%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 267 50% 15%;
+    --muted: 267 20% 20%;
+    --accent: 280 100% 76%;
+    --accent-foreground: 0 0% 98%;
+    --gray: 0 0% 80%;
+  }
+
+  html {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.timeline-item {
+  @apply relative pl-8 pb-12 last:pb-0;
+}
+
+.timeline {
+  @apply relative before:absolute before:left-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-primary before:via-accent before:to-primary before:animate-pulse;
+}
+
+.timeline-dot {
+  @apply absolute -left-[13px] top-[14px] flex h-6 w-6 items-center justify-center rounded-full border-2 border-accent bg-background shadow-lg shadow-primary/20 transition-transform duration-300;
+}
+
+.timeline-content {
+  @apply relative ml-8 rounded-xl bg-secondary/80 backdrop-blur-sm p-6 transition-all duration-300
+         hover:shadow-lg hover:shadow-primary/10 hover:bg-secondary/90
+         border border-primary/5;
+}
+
+.timeline-content::before {
+  content: '';
+  @apply absolute -left-4 top-6 h-0.5 w-4 bg-gradient-to-r from-primary to-accent;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.skill-card {
+  @apply relative overflow-hidden rounded-lg bg-secondary/80 backdrop-blur-sm p-6 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/20;
+}
+
+.skill-title {
+  @apply mb-4 text-xl font-semibold text-accent;
+}
+
+.skill-tag {
+  @apply rounded-full bg-primary/20 px-4 py-2 text-sm text-primary-foreground transition-all duration-300 hover:bg-primary/30;
+}
+
+.project-card {
+  @apply relative overflow-hidden rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-primary/20;
+}
+
+.nav-link {
+  @apply relative text-gray transition-colors hover:text-primary;
+}
+
+.nav-link.active {
+  @apply text-accent;
+}
+
+.nav-link.active::after {
+  content: '';
+  @apply absolute -bottom-1 left-0 h-0.5 w-full bg-accent;
+}
+
+.typewriter-cursor {
+  @apply inline-block w-0.5 h-8 sm:h-10 bg-[#7DE0FF]/70 ml-1;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
