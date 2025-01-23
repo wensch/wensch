@@ -28,7 +28,7 @@ const projects = [
     gradient: 'from-[#6C5CE7] to-[#a855f7]',
   },
   {
-    title: 'Dia Mundial do Banheiro - Edição 2023',
+    title: 'Dia Mundial do Banheiro - Edição 2024',
     description: 'Modern e-commerce platform built with React and Node.js',
     image: '/img/sites/DMB-1.png',
     technologies: ['PHP', 'Wordpress', 'JavaScript', 'HTML', 'CSS'],
