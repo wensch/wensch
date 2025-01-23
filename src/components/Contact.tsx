@@ -1,6 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Github, Linkedin, Phone } from 'lucide-react';
 
 export const Contact = () => {
   return (
@@ -25,8 +24,8 @@ export const Contact = () => {
             Interessado em trabalhar juntos? Entre em contato!
           </p>
           <a
-            href="mailto:seu-email@exemplo.com"
-            className="inline-flex items-center gap-2 rounded-full bg-[#A566FF] px-6 py-3 text-white transition-all duration-300 hover:border-[#FFA94D] hover:shadow-lg border-2 border-transparent"
+            href="mailto:wensch22@gmail.com ?subject=Olá, Mateus!&body=Olá, Mateus! Gostaria de saber mais sobre a sua empresa."
+            className="inline-flex items-center gap-2 rounded-full bg-[#A566FF] px-6 py-3 text-white transition-all duration-300 hover:border-[#9238ff] hover:shadow-lg border-2 border-transparent"
           >
             <Mail className="h-5 w-5" />
             Entre em Contato
@@ -35,7 +34,7 @@ export const Contact = () => {
 
         <div className="flex justify-center gap-8">
           <motion.a
-            href="https://github.com/seu-usuario"
+            href="https://github.com/wensch"
             target="_blank"
             rel="noopener noreferrer"
             initial={{ opacity: 0, y: 20 }}
@@ -46,19 +45,19 @@ export const Contact = () => {
             <Github className="h-6 w-6" />
           </motion.a>
           <motion.a
-            href="https://linkedin.com/in/seu-usuario"
+            href="https://www.linkedin.com/in/mateus-wensch-5a822411a/"
             target="_blank"
             rel="noopener noreferrer"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-foreground/60 transition-all duration-300 hover:text-[#FFA94D] hover:-translate-y-1"
+            className="text-foreground/60 transition-all duration-300 hover:text-[#A566FF] hover:-translate-y-1"
           >
             <Linkedin className="h-6 w-6" />
           </motion.a>
           <motion.a
-            href="https://twitter.com/seu-usuario"
+            href="https://wa.me/5511993218514?text=Ol%C3%A1%20vim%20atrav%C3%A9s%20do%20seu%20portif%C3%B3lio%20e%20gostaria%20de%20conversar."
             target="_blank"
             rel="noopener noreferrer"
             initial={{ opacity: 0, y: 20 }}
@@ -67,7 +66,7 @@ export const Contact = () => {
             transition={{ delay: 0.2 }}
             className="text-foreground/60 transition-all duration-300 hover:text-[#A566FF] hover:-translate-y-1"
           >
-            <Twitter className="h-6 w-6" />
+            <Phone className="h-6 w-6" />
           </motion.a>
         </div>
       </div>

@@ -6,7 +6,7 @@ const projects = [
   {
     title: 'Honda Motos',
     description: 'Modern e-commerce platform built with React and Node.js',
-    image: 'https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2089&q=80',
+    image: '/img/sites/Honda_Motos_1.png',
     technologies: ['JavaScript', 'HTML', 'CSS', 'Node.js'],
     liveUrl: 'https://www.honda.com.br/motos/',
     gradient: 'from-[#FF6B6B] to-[#FF8E53]',
@@ -14,7 +14,7 @@ const projects = [
   {
     title: 'Honda Racing',
     description: 'Collaborative task management application',
-    image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80',
+    image: '/img/sites/Honda_Racing_1.png',
     technologies: ['JavaScript', 'HTML', 'Tailwind CSS', 'Node.js'],
     liveUrl: 'https://www.honda.com.br/racing/',
     gradient: 'from-[#4A90E2] to-[#67B26F]',
@@ -22,7 +22,7 @@ const projects = [
   {
     title: 'Honda Consórcio',
     description: 'Personal portfolio website with interactive features',
-    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+    image: '/img/sites/Honda_Concessionaria_1.png',
     technologies: ['Vue', 'TypeScript', 'Tailwind CSS'],
     liveUrl: 'https://www.consorcionacionalhonda.com.br/',
     gradient: 'from-[#6C5CE7] to-[#a855f7]',
@@ -30,40 +30,40 @@ const projects = [
   {
     title: 'Dia Mundial do Banheiro - Edição 2023',
     description: 'Modern e-commerce platform built with React and Node.js',
-    image: 'https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2089&q=80',
-    technologies: ['JavaScript', 'HTML', 'CSS', 'Node.js'],
+    image: '/img/sites/DMB-1.png',
+    technologies: ['PHP', 'Wordpress', 'JavaScript', 'HTML', 'CSS'],
     liveUrl: 'https://diamundialdobanheiro.org.br',
     gradient: 'from-[#FF6B6B] to-[#FF8E53]',
   },
   {
     title: 'Dia Mundial do Banheiro - Edição 2023',
     description: 'Collaborative task management application',
-    image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80',
-    technologies: ['JavaScript', 'HTML', 'Tailwind CSS', 'Node.js'],
+    image: '/img/sites/DMB-2.png',
+    technologies: ['PHP', 'Wordpress', 'JavaScript', 'HTML', 'CSS'],
     liveUrl: 'https://diamundialdobanheiro.org.br/edicao-2023/',
     gradient: 'from-[#4A90E2] to-[#67B26F]',
   },
   {
     title: 'Dia Mundial do Banheiro - Edição 2022',
     description: 'Personal portfolio website with interactive features',
-    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-    technologies: ['Vue', 'TypeScript', 'Tailwind CSS'],
-    liveUrl: 'https://example.com',
+    image: '/img/sites/DMB-3.png',
+    technologies: ['PHP', 'Wordpress', 'JavaScript', 'HTML', 'CSS'],
+    liveUrl: 'https://diamundialdobanheiro.org.br/edicao-2022/',
     gradient: 'from-[#6C5CE7] to-[#a855f7]',
   },
   {
     title: 'Observatório do Marco Legal do Saneamento',
     description: 'Modern e-commerce platform built with React and Node.js',
-    image: 'https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2089&q=80',
-    technologies: ['JavaScript', 'HTML', 'CSS', 'Node.js'],
+    image: '/img/sites/Marco_Legal.png',
+    technologies: ['PHP', 'Wordpress', 'JavaScript', 'HTML', 'CSS'],
     liveUrl: 'https://marcolegal.aguaesaneamento.org.br',
     gradient: 'from-[#FF6B6B] to-[#FF8E53]',
   },
   {
     title: 'Instituto Água e Saneamento',
     description: 'Collaborative task management application',
-    image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80',
-    technologies: ['JavaScript', 'HTML', 'Tailwind CSS', 'Node.js'],
+    image: '/img/sites/IAS.png',
+    technologies: ['PHP', 'Wordpress', 'JavaScript', 'HTML', 'CSS'],
     liveUrl: 'https://www.aguaesaneamento.org.br',
     gradient: 'from-[#4A90E2] to-[#67B26F]',
   },
@@ -85,7 +85,7 @@ export const Projects = () => {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <motion.div
-              key={project.title}
+              key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -132,15 +132,6 @@ export const Projects = () => {
                     >
                       <ExternalLink className="h-4 w-4" />
                       Ver Projeto
-                    </a>
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm text-white backdrop-blur-sm border border-white/10 transition-all duration-300 hover:bg-white/20 hover:-translate-y-0.5"
-                    >
-                      <Github className="h-4 w-4" />
-                      Código
                     </a>
                   </div>
                 </div>

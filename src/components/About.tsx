@@ -25,7 +25,6 @@ const timeline = [
     role: 'Tech Lead',
     company: 'Banco Alfa S.A.',
     period: 'Nov 2020 - Atual',
-    type: 'Remoto',
     icon: Building2,
     skills: [
       { text: 'Vue.js', icon: Code2 },
@@ -69,7 +68,6 @@ const timeline = [
     role: 'Frontend Developer',
     company: 'F.biz',
     period: 'Out 2016 - Out 2020',
-    type: 'Híbrido',
     icon: Laptop,
     skills: [
       { text: 'HTML5', icon: Code2 },
@@ -105,7 +103,6 @@ const timeline = [
     role: 'Frontend Developer',
     company: 'UpperID',
     period: 'Out 2014 - Set 2016',
-    type: 'Presencial',
     icon: Building2,
     skills: [
       { text: 'JavaScript', icon: Code2 },
@@ -156,15 +153,15 @@ const ExperienceCard = ({ experience, isOpen, onToggle }: any) => {
             <experience.icon className="h-5 w-5 text-white" />
           </div>
           <div>
-            <h4 className="font-bold text-xl text-[#7DE0FF]">
+            <h4 className="font-bold text-xl text-[#dd9bff]">
               {experience.role}
             </h4>
             <p className="text-sm text-gray-300 mt-1">
               {experience.company} • {experience.period}
             </p>
-            <span className="inline-block mt-1 text-xs px-2 py-0.5 rounded-full bg-[#FF77E0]/10 text-[#FF77E0] border border-[#FF77E0]/20">
+            {/* <span className="inline-block mt-1 text-xs px-2 py-0.5 rounded-full bg-[#FF77E0]/10 text-[#FF77E0] border border-[#FF77E0]/20">
               {experience.type}
-            </span>
+            </span> */}
           </div>
         </div>
         <motion.div
@@ -246,7 +243,7 @@ export const About = () => {
         </motion.div>
 
         <div className="space-y-8">
-          <h3 className="text-xl font-semibold text-[#7DE0FF] flex items-center gap-2 mb-8">
+          <h3 className="text-xl font-semibold text-[#f740cc] flex items-center gap-2 mb-8">
             <Briefcase className="h-5 w-5" />
             {t('about.career')}
           </h3>
@@ -269,7 +266,7 @@ export const About = () => {
           viewport={{ once: true }}
           className="mt-16"
         >
-          <h3 className="text-xl font-semibold text-[#7DE0FF] flex items-center gap-2 mb-8">
+          <h3 className="text-xl font-semibold text-[#f740cc] flex items-center gap-2 mb-8">
             <GraduationCap className="h-5 w-5" />
             Educação
           </h3>
@@ -277,10 +274,10 @@ export const About = () => {
           <div className="rounded-xl border border-[#2E2E2E] p-6 bg-[#2E2E2E]/20 backdrop-blur-sm">
             <div className="flex items-start gap-4">
               <div className="p-2 rounded-lg bg-[#7DE0FF] bg-opacity-10">
-                <BookOpen className="h-5 w-5 text-[#7DE0FF]" />
+                <BookOpen className="h-5 w-5text-[#7DE0FF]" />
               </div>
               <div>
-                <h4 className="font-bold text-xl text-[#7DE0FF] mb-2">
+                <h4 className="font-bold text-xl text-[#dd9bff] mb-2">
                   {education.institution}
                 </h4>
                 <p className="text-white font-medium mb-3">
