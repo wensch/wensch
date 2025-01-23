@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Briefcase, 
-  Globe2, 
+  GraduationCap,
   Code2, 
   GitBranch, 
   Users, 
@@ -11,118 +11,136 @@ import {
   GitPullRequest,
   Blocks,
   Webhook,
-  ChevronDown
+  ChevronDown,
+  Building2,
+  Laptop,
+  LineChart,
+  Gauge,
+  BookOpen
 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const timeline = [
   {
-    role: 'Senior Frontend Developer',
-    company: 'Tech Solutions Inc.',
-    period: 'Jan 2022 - Present',
+    role: 'Tech Lead',
+    company: 'Banco Alfa S.A.',
+    period: 'Nov 2020 - Atual',
     type: 'Remoto',
-    icon: Globe2,
+    icon: Building2,
     skills: [
-      { text: 'React', icon: Code2 },
-      { text: 'TypeScript', icon: Code2 },
-      { text: 'Jest', icon: TestTube },
-      { text: 'GraphQL', icon: Webhook },
+      { text: 'Vue.js', icon: Code2 },
+      { text: 'Nuxt.js', icon: Code2 },
+      { text: 'Cypress', icon: TestTube },
+      { text: 'Storybook', icon: Blocks },
+      { text: 'Agile', icon: Users },
     ],
     highlights: [
       {
-        icon: Code2,
-        text: 'Liderando o desenvolvimento de aplicações web modernas e responsivas utilizando React e TypeScript.',
+        icon: Rocket,
+        text: 'Avaliação de viabilidade técnica de projetos.',
+      },
+      {
+        icon: Users,
+        text: 'Divisão de tarefas entre os desenvolvedores.',
       },
       {
         icon: GitBranch,
-        text: 'Implementando práticas de Clean Code e padrões de projeto para garantir a manutenibilidade do código.',
+        text: 'Consultoria técnica e mentoria para a equipe.',
       },
       {
-        icon: Users,
-        text: 'Mentorando desenvolvedores júniors e realizando code reviews.',
+        icon: Code2,
+        text: 'Desenvolvimento de arquiteturas front-end para aplicações financeiras.',
       },
       {
-        icon: Rocket,
-        text: 'Colaborando com equipes de UX/UI para criar interfaces intuitivas e acessíveis.',
-      },
-      {
-        icon: TestTube,
-        text: 'Implementando testes automatizados com Jest e Testing Library.',
-      },
-      {
-        icon: GitPullRequest,
-        text: 'Gerenciando esteira de CI/CD com GitHub Actions.',
-      },
-      {
-        icon: Users,
-        text: 'Participando ativamente das cerimônias ágeis e planejamento de sprints.',
+        icon: LineChart,
+        text: 'Análise e resolução de débitos técnicos da squad.',
       },
       {
         icon: Blocks,
-        text: 'Desenvolvendo componentes reutilizáveis com Storybook.',
+        text: 'Documentação de componentes reutilizáveis com Storybook.',
       },
       {
-        icon: Webhook,
-        text: 'Integrando APIs RESTful e GraphQL em aplicações frontend.',
+        icon: TestTube,
+        text: 'Implementação de testes automatizados com Cypress.',
       },
     ],
   },
   {
     role: 'Frontend Developer',
-    company: 'Digital Innovations',
-    period: 'Mar 2020 - Dec 2021',
+    company: 'F.biz',
+    period: 'Out 2016 - Out 2020',
     type: 'Híbrido',
-    icon: Briefcase,
+    icon: Laptop,
     skills: [
-      { text: 'Vue.js', icon: Code2 },
-      { text: 'Nuxt.js', icon: Code2 },
-      { text: 'REST APIs', icon: Webhook },
+      { text: 'HTML5', icon: Code2 },
+      { text: 'CSS', icon: Code2 },
+      { text: 'JavaScript', icon: Code2 },
+      { text: 'Webpack', icon: Blocks },
+      { text: 'Gulp', icon: Gauge },
     ],
     highlights: [
       {
         icon: Code2,
-        text: 'Desenvolvimento de interfaces responsivas com Vue.js e Nuxt.js.',
+        text: 'Desenvolvimento, refatoração e manutenção de projetos e landing pages.',
       },
       {
-        icon: Rocket,
-        text: 'Implementação de features complexas em aplicações SPA e SSR.',
+        icon: Laptop,
+        text: 'Foco em desenvolvimento responsivo e Mobile First.',
       },
       {
         icon: Blocks,
-        text: 'Criação de animações e transições suaves para melhor UX.',
-      },
-      {
-        icon: Webhook,
-        text: 'Integração com APIs REST e implementação de autenticação.',
-      },
-      {
-        icon: Rocket,
-        text: 'Otimização de performance e tempo de carregamento.',
+        text: 'Configuração de builds utilizando ferramentas como Webpack e Gulp.',
       },
       {
         icon: Code2,
-        text: 'Desenvolvimento de temas customizáveis com Sass.',
+        text: 'Criação de interfaces utilizando Handlebars e Nunjucks.',
       },
       {
-        icon: GitPullRequest,
-        text: 'Participação em code reviews e pair programming.',
+        icon: Gauge,
+        text: 'Aplicação de práticas para melhorar SEO e performance.',
       },
-      {
-        icon: GitBranch,
-        text: 'Documentação de código e componentes.',
-      },
+    ],
+  },
+  {
+    role: 'Frontend Developer',
+    company: 'UpperID',
+    period: 'Out 2014 - Set 2016',
+    type: 'Presencial',
+    icon: Building2,
+    skills: [
+      { text: 'JavaScript', icon: Code2 },
+      { text: 'PHP', icon: Code2 },
+      { text: 'WordPress', icon: Code2 },
+      { text: 'SEO', icon: LineChart },
+    ],
+    highlights: [
       {
         icon: Code2,
-        text: 'Manutenção e refatoração de código legado.',
+        text: 'Desenvolvimento de aplicações web focadas em SEO e performance.',
       },
       {
-        icon: Users,
-        text: 'Colaboração próxima com designers e backend developers.',
+        icon: Laptop,
+        text: 'Otimização de usabilidade em dispositivos móveis.',
+      },
+      {
+        icon: Blocks,
+        text: 'Criação de temas personalizados e integrações com WordPress.',
+      },
+      {
+        icon: Gauge,
+        text: 'Melhorias de tempo de carregamento e performance.',
       },
     ],
   },
 ];
 
-const ExperienceCard = ({ experience, isOpen, onToggle, isFirst }: any) => {
+const education = {
+  institution: 'Fiap',
+  degree: 'Graduação em Sistemas para Internet',
+  description: 'Durante o curso de Tecnologia em Sistemas de Internet, adquiri conhecimentos para criar experiências omnichannel e desenvolver plataformas tecnológicas que suportam o processo de transformação digital do mercado.',
+};
+
+const ExperienceCard = ({ experience, isOpen, onToggle }: any) => {
   return (
     <motion.div
       initial={false}
@@ -144,6 +162,9 @@ const ExperienceCard = ({ experience, isOpen, onToggle, isFirst }: any) => {
             <p className="text-sm text-gray-300 mt-1">
               {experience.company} • {experience.period}
             </p>
+            <span className="inline-block mt-1 text-xs px-2 py-0.5 rounded-full bg-[#FF77E0]/10 text-[#FF77E0] border border-[#FF77E0]/20">
+              {experience.type}
+            </span>
           </div>
         </div>
         <motion.div
@@ -199,6 +220,7 @@ const ExperienceCard = ({ experience, isOpen, onToggle, isFirst }: any) => {
 
 export const About = () => {
   const [openIndex, setOpenIndex] = useState(0);
+  const { t } = useTranslation();
 
   return (
     <section id="about" className="min-h-screen py-20">
@@ -207,10 +229,11 @@ export const About = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-8 text-center text-3xl font-bold text-[#7DE0FF]"
+          className="mb-8 text-center text-3xl font-bold"
         >
-          Sobre
+          {t('about.title')}
         </motion.h2>
+        
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -218,18 +241,16 @@ export const About = () => {
           className="mb-12 rounded-lg bg-[#2E2E2E]/20 backdrop-blur-sm p-6 border border-[#2E2E2E]"
         >
           <p className="text-lg text-gray-300">
-            Desenvolvedor Frontend apaixonado por criar experiências web excepcionais
-            e interfaces intuitivas. Com forte experiência em React e TypeScript,
-            busco sempre as melhores práticas e tecnologias mais modernas para
-            entregar soluções de alta qualidade.
+            {t('about.intro')}
           </p>
         </motion.div>
 
         <div className="space-y-8">
           <h3 className="text-xl font-semibold text-[#7DE0FF] flex items-center gap-2 mb-8">
             <Briefcase className="h-5 w-5" />
-            Trajetória Profissional
+            {t('about.career')}
           </h3>
+          
           <div className="space-y-4">
             {timeline.map((experience, index) => (
               <ExperienceCard
@@ -237,11 +258,41 @@ export const About = () => {
                 experience={experience}
                 isOpen={openIndex === index}
                 onToggle={() => setOpenIndex(openIndex === index ? -1 : index)}
-                isFirst={index === 0}
               />
             ))}
           </div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-16"
+        >
+          <h3 className="text-xl font-semibold text-[#7DE0FF] flex items-center gap-2 mb-8">
+            <GraduationCap className="h-5 w-5" />
+            Educação
+          </h3>
+          
+          <div className="rounded-xl border border-[#2E2E2E] p-6 bg-[#2E2E2E]/20 backdrop-blur-sm">
+            <div className="flex items-start gap-4">
+              <div className="p-2 rounded-lg bg-[#7DE0FF] bg-opacity-10">
+                <BookOpen className="h-5 w-5 text-[#7DE0FF]" />
+              </div>
+              <div>
+                <h4 className="font-bold text-xl text-[#7DE0FF] mb-2">
+                  {education.institution}
+                </h4>
+                <p className="text-white font-medium mb-3">
+                  {education.degree}
+                </p>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  {education.description}
+                </p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
