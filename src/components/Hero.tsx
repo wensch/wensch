@@ -2,8 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { RotatingText } from './RotatingText';
 import { TechStack } from './TechStack';
+import { useTranslation } from 'react-i18next';
 
 export const Hero = () => {
+  const { t } = useTranslation();
+
   return (
     <section
       id="home"
@@ -14,7 +17,7 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-6xl font-bold sm:text-8xl bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent mb-4"
+          className="text-6xl font-bold sm:text-8xl tracking-tight bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent mb-4"
         >
           Mateus Wensch
         </motion.h1>

@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
-const roles = [
-  'Frontend Developer',
-  'Tech Lead',
-  'Clean Code Advocate',
-  'UI/UX Enthusiast'
-];
+import { useTranslation } from 'react-i18next';
 
 export const RotatingText = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [displayText, setDisplayText] = useState('');
   const [isTyping, setIsTyping] = useState(true);
+  const { t } = useTranslation();
+
+  const roles = [
+    t('hero.roles.frontend'),
+    t('hero.roles.techlead'),
+    t('hero.roles.cleancode'),
+    t('hero.roles.uiux')
+  ];
 
   useEffect(() => {
     let timeout: NodeJS.Timeout;
@@ -35,7 +37,7 @@ export const RotatingText = () => {
     }
 
     return () => clearTimeout(timeout);
-  }, [currentIndex, displayText, isTyping]);
+  }, [currentIndex, displayText, isTyping, roles]);
 
   return (
     <div className="relative flex items-center justify-center">

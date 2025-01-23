@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const technologies = [
   { name: 'React', color: '#61DAFB' },
@@ -10,6 +11,7 @@ const technologies = [
 
 export const TechStack = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -22,7 +24,7 @@ export const TechStack = () => {
   return (
     <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
       <span className="text-xl text-gray/90">
-        Construindo interfaces modernas com
+        {t('hero.buildingWith')}
       </span>
       <div className="h-10 relative min-w-[180px]">
         <AnimatePresence mode="wait">

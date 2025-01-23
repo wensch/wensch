@@ -1,0 +1,46 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact",
+    "downloadCV": "Download CV"
+  },
+  "hero": {
+    "roles": {
+      "frontend": "Frontend Developer",
+      "techlead": "Tech Lead",
+      "cleancode": "Clean Code Advocate",
+      "uiux": "UI/UX Enthusiast"
+    },
+    "buildingWith": "Building modern interfaces with"
+  },
+  "about": {
+    "title": "About",
+    "intro": "Frontend Developer passionate about creating exceptional web experiences and intuitive interfaces. With strong experience in React and TypeScript, I always seek the best practices and modern technologies to deliver high-quality solutions.",
+    "career": "Career Path",
+    "remote": "Remote",
+    "hybrid": "Hybrid"
+  },
+  "skills": {
+    "title": "Skills",
+    "categories": {
+      "frontend": "Frontend",
+      "programming": "Programming",
+      "devops": "DevOps",
+      "database": "Database",
+      "others": "Others"
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "viewProject": "View Project",
+    "viewCode": "Code"
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Interested in working together? Get in touch!",
+    "button": "Get in Touch"
+  }
+}

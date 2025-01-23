@@ -15,6 +15,7 @@
     --accent: 280 100% 76%;
     --accent-foreground: 0 0% 98%;
     --gray: 0 0% 80%;
+    --title: 287 74% 74%;
   }
 
   html {
@@ -25,6 +26,10 @@
 @layer base {
   body {
     @apply bg-background text-foreground;
+  }
+
+  h2 {
+    @apply text-[rgb(221,155,255)];
   }
 }
 
@@ -65,7 +70,7 @@
 }
 
 .skill-title {
-  @apply mb-4 text-xl font-semibold text-accent;
+  @apply mb-4 text-xl font-semibold text-[rgb(221,155,255)];
 }
 
 .skill-tag {
@@ -77,16 +82,16 @@
 }
 
 .nav-link {
-  @apply relative text-gray transition-colors hover:text-primary;
+  @apply relative text-gray transition-colors hover:text-[rgb(221,155,255)];
 }
 
 .nav-link.active {
-  @apply text-accent;
+  @apply text-[rgb(221,155,255)];
 }
 
 .nav-link.active::after {
   content: '';
-  @apply absolute -bottom-1 left-0 h-0.5 w-full bg-accent;
+  @apply absolute -bottom-1 left-0 h-0.5 w-full bg-[rgb(221,155,255)];
 }
 
 .typewriter-cursor {
