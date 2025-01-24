@@ -1,75 +1,69 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Github, Code2 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const projects = [
   {
-    title: 'Honda Motos',
-    description: 'Modern e-commerce platform built with React and Node.js',
+    image: '/img/sites/Portifolio.png',
+    liveUrl: 'https://example.com',
+    githubUrl: 'https://github.com',
+    gradient: 'from-[#FF6B6B] to-[#FF8E53]',
+  },
+  {
     image: '/img/sites/Honda_Motos_1.png',
-    technologies: ['JavaScript', 'HTML', 'CSS', 'Node.js'],
-    liveUrl: 'https://www.honda.com.br/motos/',
+    liveUrl: 'https://example.com',
+    githubUrl: 'https://github.com',
     gradient: 'from-[#FF6B6B] to-[#FF8E53]',
   },
   {
-    title: 'Honda Racing',
-    description: 'Collaborative task management application',
     image: '/img/sites/Honda_Racing_1.png',
-    technologies: ['JavaScript', 'HTML', 'Tailwind CSS', 'Node.js'],
-    liveUrl: 'https://www.honda.com.br/racing/',
+    liveUrl: 'https://example.com',
+    githubUrl: 'https://github.com',
     gradient: 'from-[#4A90E2] to-[#67B26F]',
   },
   {
-    title: 'Honda Consórcio',
-    description: 'Personal portfolio website with interactive features',
     image: '/img/sites/Honda_Concessionaria_1.png',
-    technologies: ['Vue', 'TypeScript', 'Tailwind CSS'],
-    liveUrl: 'https://www.consorcionacionalhonda.com.br/',
+    liveUrl: 'https://example.com',
+    githubUrl: 'https://github.com',
     gradient: 'from-[#6C5CE7] to-[#a855f7]',
   },
   {
-    title: 'Dia Mundial do Banheiro - Edição 2024',
-    description: 'Modern e-commerce platform built with React and Node.js',
     image: '/img/sites/DMB-1.png',
-    technologies: ['PHP', 'Wordpress', 'JavaScript', 'HTML', 'CSS'],
-    liveUrl: 'https://diamundialdobanheiro.org.br',
+    liveUrl: 'https://example.com',
+    githubUrl: 'https://github.com',
     gradient: 'from-[#FF6B6B] to-[#FF8E53]',
   },
   {
-    title: 'Dia Mundial do Banheiro - Edição 2023',
-    description: 'Collaborative task management application',
     image: '/img/sites/DMB-2.png',
-    technologies: ['PHP', 'Wordpress', 'JavaScript', 'HTML', 'CSS'],
-    liveUrl: 'https://diamundialdobanheiro.org.br/edicao-2023/',
+    liveUrl: 'https://example.com',
+    githubUrl: 'https://github.com',
     gradient: 'from-[#4A90E2] to-[#67B26F]',
   },
   {
-    title: 'Dia Mundial do Banheiro - Edição 2022',
-    description: 'Personal portfolio website with interactive features',
     image: '/img/sites/DMB-3.png',
-    technologies: ['PHP', 'Wordpress', 'JavaScript', 'HTML', 'CSS'],
-    liveUrl: 'https://diamundialdobanheiro.org.br/edicao-2022/',
+    liveUrl: 'https://example.com',
+    githubUrl: 'https://github.com',
     gradient: 'from-[#6C5CE7] to-[#a855f7]',
   },
   {
-    title: 'Observatório do Marco Legal do Saneamento',
-    description: 'Modern e-commerce platform built with React and Node.js',
-    image: '/img/sites/Marco_Legal.png',
-    technologies: ['PHP', 'Wordpress', 'JavaScript', 'HTML', 'CSS'],
-    liveUrl: 'https://marcolegal.aguaesaneamento.org.br',
-    gradient: 'from-[#FF6B6B] to-[#FF8E53]',
+    image: '/img/sites/IAS.png',
+    liveUrl: 'https://example.com',
+    githubUrl: 'https://github.com',
+    gradient: 'from-[#4A90E2] to-[#67B26F]',
   },
   {
-    title: 'Instituto Água e Saneamento',
-    description: 'Collaborative task management application',
-    image: '/img/sites/IAS.png',
-    technologies: ['PHP', 'Wordpress', 'JavaScript', 'HTML', 'CSS'],
-    liveUrl: 'https://www.aguaesaneamento.org.br',
-    gradient: 'from-[#4A90E2] to-[#67B26F]',
+    image: '/img/sites/Marco_Legal.png',
+    liveUrl: 'https://example.com',
+    githubUrl: 'https://github.com',
+    gradient: 'from-[#6C5CE7] to-[#a855f7]',
   },
 ];
 
 export const Projects = () => {
+  const { t } = useTranslation();
+  const projectItems = t('projects.items', { returnObjects: true });
+
   return (
     <section id="projects" className="min-h-screen py-20">
       <div className="mx-auto max-w-6xl px-4">
@@ -79,13 +73,13 @@ export const Projects = () => {
           viewport={{ once: true }}
           className="mb-12 text-center text-3xl font-bold bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent"
         >
-          Projetos
+          {t('projects.title')}
         </motion.h2>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project, index) => (
+          {projectItems.map((project: any, index: number) => (
             <motion.div
-              key={index}
+              key={project.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -94,7 +88,7 @@ export const Projects = () => {
             >
               <div className="aspect-video overflow-hidden">
                 <img
-                  src={project.image}
+                  src={projects[index].image}
                   alt={project.title}
                   className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
@@ -102,7 +96,7 @@ export const Projects = () => {
               <div className="relative p-6">
                 <div className="absolute inset-0 bg-gradient-to-br opacity-5 transition-opacity duration-300 group-hover:opacity-10"
                   style={{
-                    backgroundImage: `linear-gradient(to bottom right, ${project.gradient.split('from-')[1].split(' ')[0]}, ${project.gradient.split('to-')[1]})`,
+                    backgroundImage: `linear-gradient(to bottom right, ${projects[index].gradient.split('from-')[1].split(' ')[0]}, ${projects[index].gradient.split('to-')[1]})`,
                   }}
                 />
                 <div className="relative z-10">
@@ -113,7 +107,7 @@ export const Projects = () => {
                     {project.description}
                   </p>
                   <div className="mb-6 flex flex-wrap gap-2">
-                    {project.technologies.map((tech) => (
+                    {project.technologies.map((tech: string) => (
                       <span
                         key={tech}
                         className="inline-flex items-center gap-1 rounded-full bg-white/10 px-3 py-1 text-sm text-white backdrop-blur-sm border border-white/10"
@@ -125,14 +119,23 @@ export const Projects = () => {
                   </div>
                   <div className="flex gap-4">
                     <a
-                      href={project.liveUrl}
+                      href={projects[index].liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 rounded-full bg-gradient-to-r from-accent to-primary px-4 py-2 text-sm text-white transition-all duration-300 hover:shadow-lg hover:shadow-accent/25 hover:-translate-y-0.5"
                     >
                       <ExternalLink className="h-4 w-4" />
-                      Ver Projeto
+                      {project.viewProject}
                     </a>
+                    {/* <a
+                      href={projects[index].githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm text-white backdrop-blur-sm border border-white/10 transition-all duration-300 hover:bg-white/20 hover:-translate-y-0.5"
+                    >
+                      <Github className="h-4 w-4" />
+                      {project.viewCode}
+                    </a> */}
                   </div>
                 </div>
               </div>

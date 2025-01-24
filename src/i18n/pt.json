@@ -10,33 +10,160 @@
   "hero": {
     "roles": {
       "frontend": "Desenvolvedor Frontend",
-      "techlead": "Tech Lead",
+      "techlead": "Software Engineer Leader",
       "cleancode": "Defensor do Clean Code",
-      "uiux": "Entusiasta de UI/UX"
+      "uiux": "Entusiasta de UI/UX",
+      "architecture": "Arquiteto de Soluções Digitais"
     },
     "buildingWith": "Construindo interfaces modernas com"
   },
   "about": {
     "title": "Sobre",
-    "intro": "Desenvolvedor Frontend apaixonado por criar experiências web excepcionais e interfaces intuitivas. Com forte experiência em React e TypeScript, busco sempre as melhores práticas e tecnologias mais modernas para entregar soluções de alta qualidade.",
+    "intro": "Desenvolvedor Frontend com 10 anos de experiência, especializado em interfaces web modernas e escaláveis. Experiente em React, Angular e Vue, com foco em projetar arquiteturas robustas e de alto desempenho. Combino expertise técnica, atenção aos detalhes e boas práticas do setor para entregar resultados excepcionais. Sou apaixonado por resolver desafios complexos e colaborar com equipes para criar produtos digitais inovadores. Sempre buscando superar expectativas em cada projeto.",
     "career": "Trajetória Profissional",
     "remote": "Remoto",
-    "hybrid": "Híbrido"
+    "hybrid": "Híbrido",
+    "experience": {
+      "techLead": {
+        "role": "Software Engineer Leader",
+        "company": "Banco Alfa S.A.",
+        "period": "Nov 2020 - Atual",
+        "type": "Remoto",
+        "highlights": [
+          "Avaliação de viabilidade técnica de projetos",
+          "Divisão de tarefas entre os desenvolvedores",
+          "Consultoria técnica e mentoria para a equipe",
+          "Desenvolvimento de arquiteturas front-end para aplicações financeiras",
+          "Análise e resolução de débitos técnicos da squad",
+          "Documentação de componentes reutilizáveis com Storybook",
+          "Implementação de testes automatizados com Cypress"
+        ]
+      },
+      "frontendFbiz": {
+        "role": "Frontend Developer",
+        "company": "F.biz",
+        "period": "Out 2016 - Out 2020",
+        "type": "Híbrido",
+        "highlights": [
+          "Desenvolvimento, refatoração e manutenção de projetos e landing pages",
+          "Foco em desenvolvimento responsivo e Mobile First",
+          "Configuração de builds utilizando ferramentas como Webpack e Gulp",
+          "Criação de interfaces utilizando Handlebars e Nunjucks",
+          "Aplicação de práticas para melhorar SEO e performance"
+        ]
+      },
+      "frontendUpperid": {
+        "role": "Frontend Developer",
+        "company": "UpperID",
+        "period": "Out 2014 - Set 2016",
+        "type": "Presencial",
+        "highlights": [
+          "Desenvolvimento de aplicações web focadas em SEO e performance",
+          "Otimização de usabilidade em dispositivos móveis",
+          "Criação de temas personalizados e integrações com WordPress",
+          "Melhorias de tempo de carregamento e performance"
+        ]
+      }
+    },
+    "education": {
+      "title": "Educação",
+      "institution": "Fiap",
+      "degree": "Graduação em Sistemas para Internet",
+      "description": "Durante o curso de Tecnologia em Sistemas de Internet, adquiri conhecimentos para criar experiências omnichannel e desenvolver plataformas tecnológicas que suportam o processo de transformação digital do mercado."
+    }
   },
   "skills": {
     "title": "Habilidades",
     "categories": {
-      "frontend": "Frontend",
-      "programming": "Programação",
-      "devops": "DevOps",
-      "database": "Banco de Dados",
-      "others": "Outros"
+      "frontend": {
+        "title": "Frontend",
+        "skills": ["HTML", "CSS", "Sass", "Tailwind", "Styled Components", "Storybook"]
+      },
+      "programming": {
+        "title": "Programação",
+        "skills": ["JavaScript", "TypeScript", "React", "Vue.js", "Node.js", "Jest"]
+      },
+      "devops": {
+        "title": "DevOps",
+        "skills": ["Docker", "Git", "CI/CD", "AWS"]
+      },
+      "database": {
+        "title": "Banco de Dados",
+        "skills": ["MySQL", "SQL", "MongoDB", "PostgreSQL"]
+      },
+      "others": {
+        "title": "Outros",
+        "skills": ["PHP", "WordPress", "SEO", "Agile (Kanban/Scrum)", "REST APIs", "GraphQL"]
+      }
     }
   },
   "projects": {
     "title": "Projetos",
-    "viewProject": "Ver Projeto",
-    "viewCode": "Código"
+    "items": [
+      {
+        "title": "Wensch.dev",
+        "description": "Este é meu portfólio pessoal, criado para exibir meus projetos e habilidades. Busquei oferecer uma experiência intuitiva e responsiva, otimizada para mostrar minha jornada como desenvolvedor e facilitar a visualização do meu trabalho.",
+        "technologies": ["React", "Next", "Tailwind CSS", "Typescript", "Node.js"],
+        "viewProject": "Ver Projeto",
+        "viewCode": "Código"
+      },
+      {
+        "title": "Honda Motos",
+        "description": "Desenvolvimento de um site moderno e responsivo para a linha de motos da Honda, com foco na experiência do usuário e otimização para dispositivos móveis",
+        "technologies": ["JavaScript", "HTML", "CSS", "Node.js"],
+        "viewProject": "Ver Projeto",
+        "viewCode": "Código"
+      },
+      {
+        "title": "Honda Racing",
+        "description": "Projeto do site para a divisão de competições da Honda, com design dinâmico e integração com as redes sociais.",
+        "technologies": ["JavaScript", "HTML", "Tailwind CSS", "Node.js"],
+        "viewProject": "Ver Projeto",
+        "viewCode": "Código"
+      },
+      {
+        "title": "Honda Consórcio",
+        "description": "Criação de uma plataforma digital para o consórcio de motos da Honda, utilizando Vue.js e TypeScript para garantir uma navegação fluida e segura. O design é responsivo e otimizado para diferentes dispositivos.",
+        "technologies": ["Vue.js", "TypeScript", "Tailwind CSS"],
+        "viewProject": "Ver Projeto",
+        "viewCode": "Código"
+      },
+      {
+        "title": "Dia Mundial do Banheiro - Edição 2024",
+        "description": "Desenvolvimento do site institucional para a edição 2024 do Dia Mundial do Banheiro, com foco em informações sobre o evento e conteúdo multimídia.",
+        "technologies": ["PHP", "WordPress", "HTML", "CSS"],
+        "viewProject": "Ver Projeto",
+        "viewCode": "Código"
+      },
+      {
+        "title": "Dia Mundial do Banheiro - Edição 2023",
+        "description": "Plataforma interativa para a edição 2023 do Dia Mundial do Banheiro, com foco na promoção de eventos e iniciativas relacionadas ao saneamento.",
+        "technologies": ["PHP", "WordPress", "HTML", "CSS"],
+        "viewProject": "Ver Projeto",
+        "viewCode": "Código"
+      },
+      {
+        "title": "Dia Mundial do Banheiro - Edição 2022",
+        "description": "Plataforma digital criada para promover a edição 2022 do Dia Mundial do Banheiro, com design moderno e navegação fluida.",
+        "technologies": ["PHP", "WordPress", "HTML", "CSS"],
+        "viewProject": "Ver Projeto",
+        "viewCode": "Código"
+      },
+      {
+        "title": "Instituto Água e Saneamento",
+        "description": "Plataforma institucional para o Instituto Água e Saneamento, com foco em disseminação de conteúdo sobre o saneamento básico no Brasil.",
+        "technologies": ["PHP", "WordPress", "HTML", "CSS"],
+        "viewProject": "Ver Projeto",
+        "viewCode": "Código"
+      },
+      {
+        "title": "Observatório do Marco Legal do Saneamento",
+        "description": "Desenvolvimento de um portal informativo sobre o Marco Legal do Saneamento, com conteúdo dinâmico e atualização constante de dados sobre saneamento no Brasil",
+        "technologies": ["PHP", "WordPress", "HTML", "CSS"],
+        "viewProject": "Ver Projeto",
+        "viewCode": "Código"
+      }
+    ]
   },
   "contact": {
     "title": "Contato",

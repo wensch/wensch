@@ -43,7 +43,7 @@ export const Skills = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-12 text-center text-3xl font-bold text-[#9238ff]"
+          className="mb-12 text-center text-3xl font-bold text-[#7DE0FF]"
         >
           Skills
         </motion.h2>
@@ -67,7 +67,7 @@ export const Skills = () => {
                   >
                     <category.icon className="h-5 w-5 text-white" />
                   </div>
-                  <h3 className="text-xl font-boldtext-[#7DE0FF]">
+                  <h3 className="text-xl font-bold text-[#7DE0FF]">
                     {category.title}
                   </h3>
                 </div>

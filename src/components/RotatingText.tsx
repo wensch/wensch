@@ -12,7 +12,8 @@ export const RotatingText = () => {
     t('hero.roles.frontend'),
     t('hero.roles.techlead'),
     t('hero.roles.cleancode'),
-    t('hero.roles.uiux')
+    t('hero.roles.uiux'),
+    t('hero.roles.architecture')
   ];
 
   useEffect(() => {

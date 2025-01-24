@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X, Languages, FileDown } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { jsPDF } from 'jspdf';
 
 const menuItems = [
   { label: 'header.home', href: '#home' },
@@ -16,22 +15,15 @@ export const Header = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t, i18n } = useTranslation();
-  
+
   const toggleLanguage = () => {
     const newLang = i18n.language === 'pt' ? 'en' : 'pt';
     i18n.changeLanguage(newLang);
   };
 
-  const downloadCV = () => {
-    const doc = new jsPDF();
-    doc.setFont('helvetica', 'bold');
-    doc.setFontSize(20);
-    doc.text('Mateus Wensch', 20, 20);
-    doc.setFont('helvetica', 'normal');
-    doc.setFontSize(12);
-    doc.text('Frontend Developer', 20, 30);
-    doc.save('mateus-wensch-cv.pdf');
-  };
+  const pdfLink = i18n.language === 'pt' 
+    ? '/files/mateus-wensch-cv-pt.pdf' 
+    : '/files/mateus-wensch-cv-en.pdf';
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -92,13 +84,15 @@ export const Header = () => {
 
         {/* Actions */}
         <div className="flex items-center gap-4">
-          <button
-            onClick={downloadCV}
+          {/* Link para o PDF local dependendo do idioma */}
+          <a
+            href={pdfLink}
+            download
             className="flex items-center gap-2 rounded-full border border-[rgb(221,155,255)]/50 px-3 py-1.5 text-[rgb(221,155,255)] text-sm transition-all duration-300 hover:border-[rgb(221,155,255)] hover:bg-[rgb(221,155,255)]/5"
           >
             <FileDown className="h-4 w-4" />
             <span className="hidden sm:inline">{t('header.downloadCV')}</span>
-          </button>
+          </a>
 
           <button
             onClick={toggleLanguage}

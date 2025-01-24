@@ -12,31 +12,158 @@
       "frontend": "Frontend Developer",
       "techlead": "Tech Lead",
       "cleancode": "Clean Code Advocate",
-      "uiux": "UI/UX Enthusiast"
+      "uiux": "UI/UX Enthusiast",
+      "architecture": "Digital Solutions Architect"
     },
     "buildingWith": "Building modern interfaces with"
   },
   "about": {
     "title": "About",
-    "intro": "Frontend Developer passionate about creating exceptional web experiences and intuitive interfaces. With strong experience in React and TypeScript, I always seek the best practices and modern technologies to deliver high-quality solutions.",
+    "intro": "Frontend Developer with 10 years of experience specializing in modern, scalable web interfaces. Skilled in React, Angular, and Vue, with a focus on designing robust, high-performance architectures. I combine technical expertise with attention to detail and industry best practices to deliver exceptional results. Passionate about solving complex challenges and collaborating with teams to create innovative digital products. Always striving to exceed expectations in every project.",
     "career": "Career Path",
     "remote": "Remote",
-    "hybrid": "Hybrid"
+    "hybrid": "Hybrid",
+    "experience": {
+      "techLead": {
+        "role": "Software Engineer Leader",
+        "company": "Banco Alfa S.A.",
+        "period": "Nov 2020 - Present",
+        "type": "Remote",
+        "highlights": [
+          "Technical feasibility assessment of projects",
+          "Task distribution among developers",
+          "Technical consulting and team mentoring",
+          "Development of front-end architectures for financial applications",
+          "Analysis and resolution of technical debt",
+          "Documentation of reusable components with Storybook",
+          "Implementation of automated tests with Cypress"
+        ]
+      },
+      "frontendFbiz": {
+        "role": "Frontend Developer",
+        "company": "F.biz",
+        "period": "Oct 2016 - Oct 2020",
+        "type": "Hybrid",
+        "highlights": [
+          "Development, refactoring and maintenance of projects and landing pages",
+          "Focus on responsive development and Mobile First",
+          "Build configuration using tools like Webpack and Gulp",
+          "Interface creation using Handlebars and Nunjucks",
+          "Application of practices to improve SEO and performance"
+        ]
+      },
+      "frontendUpperid": {
+        "role": "Frontend Developer",
+        "company": "UpperID",
+        "period": "Oct 2014 - Sep 2016",
+        "type": "On-site",
+        "highlights": [
+          "Development of web applications focused on SEO and performance",
+          "Mobile device usability optimization",
+          "Creation of custom themes and WordPress integrations",
+          "Loading time and performance improvements"
+        ]
+      }
+    },
+    "education": {
+      "title": "Education",
+      "institution": "Fiap",
+      "degree": "Bachelor in Internet Systems",
+      "description": "During the Internet Systems Technology course, I acquired knowledge to create omnichannel experiences and develop technological platforms that support the market's digital transformation process."
+    }
   },
   "skills": {
     "title": "Skills",
     "categories": {
-      "frontend": "Frontend",
-      "programming": "Programming",
-      "devops": "DevOps",
-      "database": "Database",
-      "others": "Others"
+      "frontend": {
+        "title": "Frontend",
+        "skills": ["HTML", "CSS", "Sass", "Tailwind", "Styled Components", "Storybook"]
+      },
+      "programming": {
+        "title": "Programming",
+        "skills": ["JavaScript", "TypeScript", "React", "Vue.js", "Node.js", "Jest"]
+      },
+      "devops": {
+        "title": "DevOps",
+        "skills": ["Docker", "Git", "CI/CD", "AWS"]
+      },
+      "database": {
+        "title": "Database",
+        "skills": ["MySQL", "SQL", "MongoDB", "PostgreSQL"]
+      },
+      "others": {
+        "title": "Others",
+        "skills": ["PHP", "WordPress", "SEO", "Agile (Kanban/Scrum)", "REST APIs", "GraphQL"]
+      }
     }
   },
   "projects": {
     "title": "Projects",
-    "viewProject": "View Project",
-    "viewCode": "Code"
+    "items": [
+      {
+        "title": "Wensch.dev",
+        "description": "This is my personal portfolio, designed to showcase my projects and skills. I aimed to provide an intuitive and responsive experience, optimized to highlight my journey as a developer and make it easy to explore my work.",
+        "technologies": ["React", "Next", "Tailwind CSS", "Typescript", "Node.js"],
+        "viewProject": "View Project",
+        "viewCode": "Code"
+      },
+      {
+        "title": "Honda Motos",
+        "description": "Development of a modern and responsive website for Honda's motorcycle line, focused on user experience and mobile optimization.",
+        "technologies": ["JavaScript", "HTML", "CSS", "Node.js"],
+        "viewProject": "View Project",
+        "viewCode": "Code"
+      },
+      {
+        "title": "Honda Racing",
+        "description": "Website design for Honda's racing division, featuring a dynamic layout and social media integration.",
+        "technologies": ["JavaScript", "HTML", "Tailwind CSS", "Node.js"],
+        "viewProject": "View Project",
+        "viewCode": "Code"
+      },
+      {
+        "title": "Honda Consórcio",
+        "description": "Creation of a digital platform for Honda's motorcycle consortium, using Vue.js and TypeScript to ensure smooth and secure navigation. The design is responsive and optimized for various devices.",
+        "technologies": ["Vue.js", "TypeScript", "Tailwind CSS"],
+        "viewProject": "View Project",
+        "viewCode": "Code"
+      },
+      {
+        "title": "World Toilet Day - 2024 Edition",
+        "description": "Development of the institutional website for the 2024 World Toilet Day edition, focusing on event information and multimedia content.",
+        "technologies": ["PHP", "WordPress", "HTML", "CSS"],
+        "viewProject": "View Project",
+        "viewCode": "Code"
+      },
+      {
+        "title": "World Toilet Day - 2023 Edition",
+        "description": "Interactive platform for the 2023 World Toilet Day edition, promoting events and initiatives related to sanitation.",
+        "technologies": ["PHP", "WordPress", "HTML", "CSS"],
+        "viewProject": "View Project",
+        "viewCode": "Code"
+      },
+      {
+        "title": "World Toilet Day - 2022 Edition",
+        "description": "Digital platform created to promote the 2022 World Toilet Day edition, with a modern design and smooth navigation.",
+        "technologies": ["PHP", "WordPress", "HTML", "CSS"],
+        "viewProject": "View Project",
+        "viewCode": "Code"
+      },
+      {
+        "title": "Water and Sanitation Institute",
+        "description": "Institutional platform for the Water and Sanitation Institute, focusing on spreading content about basic sanitation in Brazil.",
+        "technologies": ["PHP", "WordPress", "HTML", "CSS"],
+        "viewProject": "View Project",
+        "viewCode": "Code"
+      },
+      {
+        "title": "Legal Framework for Sanitation Observatory",
+        "description": "Development of an informative portal on the Legal Framework for Sanitation, featuring dynamic content and regular updates on sanitation data in Brazil.",
+        "technologies": ["PHP", "WordPress", "HTML", "CSS"],
+        "viewProject": "View Project",
+        "viewCode": "Code"
+      }
+    ]
   },
   "contact": {
     "title": "Contact",

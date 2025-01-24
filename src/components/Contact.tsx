@@ -1,7 +1,11 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Github, Linkedin, Phone } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export const Contact = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="contact" className="h-[50vh] py-20 flex items-center">
       <div className="mx-auto max-w-4xl px-4 text-center">
@@ -11,7 +15,7 @@ export const Contact = () => {
           viewport={{ once: true }}
           className="mb-12 text-3xl font-bold text-[rgb(221,155,255)]"
         >
-          Contato
+          {t('contact.title')}
         </motion.h2>
 
         <motion.div
@@ -21,14 +25,14 @@ export const Contact = () => {
           className="mb-12"
         >
           <p className="mb-8 text-lg text-foreground/80">
-            Interessado em trabalhar juntos? Entre em contato!
+            {t('contact.description')}
           </p>
           <a
-            href="mailto:wensch22@gmail.com ?subject=Olá, Mateus!&body=Olá, Mateus! Gostaria de saber mais sobre a sua empresa."
-            className="inline-flex items-center gap-2 rounded-full bg-[#A566FF] px-6 py-3 text-white transition-all duration-300 hover:border-[#9238ff] hover:shadow-lg border-2 border-transparent"
+            href="mailto:wensch22@gmail.com"
+            className="inline-flex items-center gap-2 rounded-full bg-[#A566FF] px-6 py-3 text-white transition-all duration-300 hover:border-[#A566FF] hover:shadow-lg border-2 border-transparent"
           >
             <Mail className="h-5 w-5" />
-            Entre em Contato
+            {t('contact.button')}
           </a>
         </motion.div>
 
