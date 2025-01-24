@@ -81,7 +81,7 @@
       },
       "programming": {
         "title": "Programação",
-        "skills": ["JavaScript", "TypeScript", "React", "Vue.js", "Node.js", "Jest"]
+        "skills": ["JavaScript", "TypeScript", "React", "Vue.js", "Angular", "Next.js", "Nuxt.js", "Node.js", "Jest"]
       },
       "devops": {
         "title": "DevOps",

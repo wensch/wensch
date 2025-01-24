@@ -29,7 +29,7 @@
   }
 
   h2 {
-    @apply text-[rgb(221,155,255)];
+    @apply text-[#9238ff];
   }
 }
 

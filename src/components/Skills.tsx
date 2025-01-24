@@ -1,39 +1,98 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code2, Palette, Server, Database, Wrench } from 'lucide-react';
+import { Code2, Palette, Server, Database, Wrench, CheckCircle, Repeat } from 'lucide-react';
 
 const skillCategories = [
   {
     title: 'Frontend',
-    icon: Palette,
-    skills: ['HTML', 'CSS', 'Sass', 'Tailwind', 'Styled Components', 'Storybook'],
+    icon: Palette, // Ícone para Frontend
+    skills: [
+      'HTML',
+      'CSS',
+      'Sass',
+      'Tailwind',
+      'Styled Components',
+      'Storybook',
+      'Bootstrap',
+      'Material-UI',
+      'Handlebars',
+      'SEO' // Adicionada da seção Others
+    ],
     color: '#A566FF',
   },
   {
     title: 'Programming',
-    icon: Code2,
-    skills: ['JavaScript', 'TypeScript', 'React', 'Vue.js', 'Node.js', 'Jest'],
+    icon: Code2, // Ícone para Programação
+    skills: [
+      'JavaScript',
+      'TypeScript',
+      'React',
+      'Vue.js',
+      'Angular',
+      'Next.js',
+      'Nuxt.js',
+      'Node.js',
+      'Jest',
+      'TDD',
+      'PHP',
+      'WordPress',
+    ],
     color: '#FFA94D',
+  },
+  {
+    title: 'Backend & Database',
+    icon: Database, // Ícone para Backend e Bancos de Dados
+    skills: [
+      'Node.js',
+      'MySQL',
+      'SQL',
+      'MongoDB',
+      'PostgreSQL',
+      'SQLite',
+      'Firebase',
+      'REST APIs',
+      'GraphQL',
+      'WebSockets', // Adicionada da seção Others
+      'Microservices' // Adicionada da seção Others
+    ],
+    color: '#6CC644',
+  },
+  {
+    title: 'Testing & Quality',
+    icon: CheckCircle, // Ícone para Testes e Qualidade
+    skills: [
+      'Cypress',
+      'Jest'
+    ],
+    color: '#FF6B6B',
   },
   {
     title: 'DevOps',
-    icon: Server,
-    skills: ['Docker', 'Git', 'CI/CD', 'AWS'],
-    color: '#A566FF',
+    icon: Server, // Ícone para DevOps
+    skills: [
+      'Docker',
+      'Git',
+      'GitHub',
+      'CI/CD',
+      'Jenkins',
+      'Azure DevOps',
+      'Webpack',
+      'ESLint'
+    ],
+    color: '#4D96FF',
   },
   {
-    title: 'Database',
-    icon: Database,
-    skills: ['MySQL', 'SQL', 'MongoDB', 'PostgreSQL'],
-    color: '#FFA94D',
-  },
-  {
-    title: 'Others',
-    icon: Wrench,
-    skills: ['PHP', 'WordPress', 'SEO', 'Agile (Kanban/Scrum)', 'REST APIs', 'GraphQL'],
-    color: '#A566FF',
-  },
+    title: 'Agile Methodologies',
+    icon: Repeat, // Ícone para Metodologias Ágeis
+    skills: [
+      'Agile/Scrum',
+      'Kanban'
+    ],
+    color: '#FFD700',
+  }
 ];
+
+export default skillCategories;
 
 export const Skills = () => {
   return (
@@ -43,7 +102,7 @@ export const Skills = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-12 text-center text-3xl font-bold text-[#7DE0FF]"
+          className="mb-12 text-center text-3xl font-bold text-[#9238ff]"
         >
           Skills
         </motion.h2>
@@ -67,7 +126,7 @@ export const Skills = () => {
                   >
                     <category.icon className="h-5 w-5 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-[#7DE0FF]">
+                  <h3 className="text-xl font-bold text-[#dd9bff]">
                     {category.title}
                   </h3>
                 </div>
