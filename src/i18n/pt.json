@@ -24,10 +24,25 @@
     "remote": "Remoto",
     "hybrid": "Híbrido",
     "experience": {
+      "seniorFrontendSafra": {
+        "role": "Senior Front-end Developer",
+        "company": "Banco Safra",
+        "period": "Jun 2025 - Atual",
+        "type": "Híbrido",
+        "highlights": [
+          "Atuo no desenvolvimento, evolução e sustentação de aplicações críticas do ambiente bancário, com foco em engenharia de software front-end, segurança, performance, escalabilidade e qualidade das soluções.",
+          "<b>Desenvolvimento e Arquitetura:</b> Construção de interfaces complexas e escaláveis utilizando Angular, TypeScript e RxJS, aplicando componentização, baixo acoplamento e princípios de arquitetura sustentável.",
+          "<b>Qualidade e Engenharia de Software:</b> Aplicação de Clean Code, princípios SOLID, Design Patterns e boas práticas de desenvolvimento, contribuindo para código mais legível, testável e manutenível.",
+          "<b>Integração e Segurança:</b> Desenvolvimento e integração com APIs RESTful e microsserviços, considerando requisitos de segurança, autenticação e confiabilidade característicos do setor financeiro.",
+          "<b>Performance e Otimização:</b> Análise e otimização contínua da performance das aplicações, reduzindo custos de processamento e melhorando tempo de carregamento, responsividade e experiência do usuário.",
+          "<b>Troubleshooting e Alta Disponibilidade:</b> Investigação, diagnóstico e resolução de problemas técnicos e incidentes críticos, atuando na identificação de causas raiz e na estabilização de sistemas de alta criticidade.",
+          "<b>Testes e Entrega Contínua:</b> Desenvolvimento e manutenção de testes automatizados, incluindo testes unitários e de integração, contribuindo para a confiabilidade das entregas e a evolução dos processos de CI/CD."
+        ]
+      },
       "techLead": {
-        "role": "Software Engineer Leader",
+        "role": "Software Engineer Leader / Tech Lead",
         "company": "Banco Alfa S.A.",
-        "period": "Nov 2020 - Atual",
+        "period": "Nov 2020 - Jun 2025",
         "type": "Híbrido",
         "highlights": [
           "Avaliação de viabilidade técnica de projetos",
@@ -77,23 +92,57 @@
     "categories": {
       "frontend": {
         "title": "Frontend",
-        "skills": ["HTML", "CSS", "Sass", "Tailwind", "Styled Components", "Storybook"]
+        "skills": [
+          "HTML",
+          "CSS",
+          "Sass",
+          "Tailwind",
+          "Styled Components",
+          "Storybook"
+        ]
       },
       "programming": {
         "title": "Programação",
-        "skills": ["JavaScript", "TypeScript", "React", "Vue.js", "Angular", "Next.js", "Nuxt.js", "Node.js", "Jest"]
+        "skills": [
+          "JavaScript",
+          "TypeScript",
+          "React",
+          "Vue.js",
+          "Angular",
+          "Next.js",
+          "Nuxt.js",
+          "Node.js",
+          "Jest"
+        ]
       },
       "devops": {
         "title": "DevOps",
-        "skills": ["Docker", "Git", "CI/CD", "AWS"]
+        "skills": [
+          "Docker",
+          "Git",
+          "CI/CD",
+          "AWS"
+        ]
       },
       "database": {
         "title": "Banco de Dados",
-        "skills": ["MySQL", "SQL", "MongoDB", "PostgreSQL"]
+        "skills": [
+          "MySQL",
+          "SQL",
+          "MongoDB",
+          "PostgreSQL"
+        ]
       },
       "others": {
         "title": "Outros",
-        "skills": ["PHP", "WordPress", "SEO", "Agile (Kanban/Scrum)", "REST APIs", "GraphQL"]
+        "skills": [
+          "PHP",
+          "WordPress",
+          "SEO",
+          "Agile (Kanban/Scrum)",
+          "REST APIs",
+          "GraphQL"
+        ]
       }
     }
   },
@@ -103,63 +152,108 @@
       {
         "title": "Wensch.dev",
         "description": "Este é meu portfólio pessoal, criado para exibir meus projetos e habilidades. Busquei oferecer uma experiência intuitiva e responsiva, otimizada para mostrar minha jornada como desenvolvedor e facilitar a visualização do meu trabalho.",
-        "technologies": ["React", "Next", "Tailwind CSS", "Typescript", "Node.js"],
+        "technologies": [
+          "React",
+          "Next",
+          "Tailwind CSS",
+          "Typescript",
+          "Node.js"
+        ],
         "viewProject": "Ver Projeto",
         "viewCode": "Código"
       },
       {
         "title": "Honda Motos",
         "description": "Desenvolvimento de um site moderno e responsivo para a linha de motos da Honda, com foco na experiência do usuário e otimização para dispositivos móveis",
-        "technologies": ["JavaScript", "HTML", "CSS", "Node.js"],
+        "technologies": [
+          "JavaScript",
+          "HTML",
+          "CSS",
+          "Node.js"
+        ],
         "viewProject": "Ver Projeto",
         "viewCode": "Código"
       },
       {
         "title": "Honda Racing",
         "description": "Projeto do site para a divisão de competições da Honda, com design dinâmico e integração com as redes sociais.",
-        "technologies": ["JavaScript", "HTML", "Tailwind CSS", "Node.js"],
+        "technologies": [
+          "JavaScript",
+          "HTML",
+          "Tailwind CSS",
+          "Node.js"
+        ],
         "viewProject": "Ver Projeto",
         "viewCode": "Código"
       },
       {
         "title": "Honda Consórcio",
         "description": "Criação de uma plataforma digital para o consórcio de motos da Honda, utilizando Vue.js e TypeScript para garantir uma navegação fluida e segura. O design é responsivo e otimizado para diferentes dispositivos.",
-        "technologies": ["Vue.js", "TypeScript", "Tailwind CSS"],
+        "technologies": [
+          "Vue.js",
+          "TypeScript",
+          "Tailwind CSS"
+        ],
         "viewProject": "Ver Projeto",
         "viewCode": "Código"
       },
       {
         "title": "Dia Mundial do Banheiro - Edição 2024",
         "description": "Desenvolvimento do site institucional para a edição 2024 do Dia Mundial do Banheiro, com foco em informações sobre o evento e conteúdo multimídia.",
-        "technologies": ["PHP", "WordPress", "HTML", "CSS"],
+        "technologies": [
+          "PHP",
+          "WordPress",
+          "HTML",
+          "CSS"
+        ],
         "viewProject": "Ver Projeto",
         "viewCode": "Código"
       },
       {
         "title": "Dia Mundial do Banheiro - Edição 2023",
         "description": "Plataforma interativa para a edição 2023 do Dia Mundial do Banheiro, com foco na promoção de eventos e iniciativas relacionadas ao saneamento.",
-        "technologies": ["PHP", "WordPress", "HTML", "CSS"],
+        "technologies": [
+          "PHP",
+          "WordPress",
+          "HTML",
+          "CSS"
+        ],
         "viewProject": "Ver Projeto",
         "viewCode": "Código"
       },
       {
         "title": "Dia Mundial do Banheiro - Edição 2022",
         "description": "Plataforma digital criada para promover a edição 2022 do Dia Mundial do Banheiro, com design moderno e navegação fluida.",
-        "technologies": ["PHP", "WordPress", "HTML", "CSS"],
+        "technologies": [
+          "PHP",
+          "WordPress",
+          "HTML",
+          "CSS"
+        ],
         "viewProject": "Ver Projeto",
         "viewCode": "Código"
       },
       {
         "title": "Instituto Água e Saneamento",
         "description": "Plataforma institucional para o Instituto Água e Saneamento, com foco em disseminação de conteúdo sobre o saneamento básico no Brasil.",
-        "technologies": ["PHP", "WordPress", "HTML", "CSS"],
+        "technologies": [
+          "PHP",
+          "WordPress",
+          "HTML",
+          "CSS"
+        ],
         "viewProject": "Ver Projeto",
         "viewCode": "Código"
       },
       {
         "title": "Observatório do Marco Legal do Saneamento",
         "description": "Desenvolvimento de um portal informativo sobre o Marco Legal do Saneamento, com conteúdo dinâmico e atualização constante de dados sobre saneamento no Brasil",
-        "technologies": ["PHP", "WordPress", "HTML", "CSS"],
+        "technologies": [
+          "PHP",
+          "WordPress",
+          "HTML",
+          "CSS"
+        ],
         "viewProject": "Ver Projeto",
         "viewCode": "Código"
       }

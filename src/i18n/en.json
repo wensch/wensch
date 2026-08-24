@@ -24,10 +24,25 @@
     "remote": "Remote",
     "hybrid": "Hybrid",
     "experience": {
+      "seniorFrontendSafra": {
+        "role": "Senior Front-end Developer",
+        "company": "Banco Safra",
+        "period": "Jun 2025 - Present",
+        "type": "Hybrid",
+        "highlights": [
+          "I work on the development, evolution, and maintenance of critical banking applications, with a strong focus on front-end software engineering, security, performance, scalability, and solution quality.",
+          "<b>Development &amp; Architecture:</b> Building complex and scalable interfaces using Angular, TypeScript, and RxJS, applying componentization, low coupling, and sustainable architectural principles.",
+          "<b>Software Engineering &amp; Quality:</b> Applying Clean Code, SOLID principles, Design Patterns, and software engineering best practices to deliver code that is readable, testable, maintainable, and scalable.",
+          "<b>Integration &amp; Security:</b> Developing and integrating RESTful APIs and microservices, addressing security, authentication, reliability, and other requirements inherent to the financial sector.",
+          "<b>Performance &amp; Optimization:</b> Continuously analyzing and optimizing application performance, reducing processing overhead and improving load times, responsiveness, and overall user experience.",
+          "<b>Troubleshooting &amp; High Availability:</b> Investigating, diagnosing, and resolving complex technical issues and critical incidents, identifying root causes and contributing to the stability and availability of highly critical systems.",
+          "<b>Testing &amp; Continuous Delivery:</b> Developing and maintaining automated tests, including unit and integration tests, contributing to delivery reliability and the continuous improvement of CI/CD processes."
+        ]
+      },
       "techLead": {
-        "role": "Software Engineer Leader",
+        "role": "Software Engineer Leader / Tech Lead",
         "company": "Banco Alfa S.A.",
-        "period": "Nov 2020 - Present",
+        "period": "Nov 2020 - Jun 2025",
         "type": "Hybrid",
         "highlights": [
           "Technical feasibility assessment of projects",
@@ -77,23 +92,54 @@
     "categories": {
       "frontend": {
         "title": "Frontend",
-        "skills": ["HTML", "CSS", "Sass", "Tailwind", "Styled Components", "Storybook"]
+        "skills": [
+          "HTML",
+          "CSS",
+          "Sass",
+          "Tailwind",
+          "Styled Components",
+          "Storybook"
+        ]
       },
       "programming": {
         "title": "Programming",
-        "skills": ["JavaScript", "TypeScript", "React", "Vue.js", "Node.js", "Jest"]
+        "skills": [
+          "JavaScript",
+          "TypeScript",
+          "React",
+          "Vue.js",
+          "Node.js",
+          "Jest"
+        ]
       },
       "devops": {
         "title": "DevOps",
-        "skills": ["Docker", "Git", "CI/CD", "AWS"]
+        "skills": [
+          "Docker",
+          "Git",
+          "CI/CD",
+          "AWS"
+        ]
       },
       "database": {
         "title": "Database",
-        "skills": ["MySQL", "SQL", "MongoDB", "PostgreSQL"]
+        "skills": [
+          "MySQL",
+          "SQL",
+          "MongoDB",
+          "PostgreSQL"
+        ]
       },
       "others": {
         "title": "Others",
-        "skills": ["PHP", "WordPress", "SEO", "Agile (Kanban/Scrum)", "REST APIs", "GraphQL"]
+        "skills": [
+          "PHP",
+          "WordPress",
+          "SEO",
+          "Agile (Kanban/Scrum)",
+          "REST APIs",
+          "GraphQL"
+        ]
       }
     }
   },
@@ -103,63 +149,108 @@
       {
         "title": "Wensch.dev",
         "description": "This is my personal portfolio, designed to showcase my projects and skills. I aimed to provide an intuitive and responsive experience, optimized to highlight my journey as a developer and make it easy to explore my work.",
-        "technologies": ["React", "Next", "Tailwind CSS", "Typescript", "Node.js"],
+        "technologies": [
+          "React",
+          "Next",
+          "Tailwind CSS",
+          "Typescript",
+          "Node.js"
+        ],
         "viewProject": "View Project",
         "viewCode": "Code"
       },
       {
         "title": "Honda Motos",
         "description": "Development of a modern and responsive website for Honda's motorcycle line, focused on user experience and mobile optimization.",
-        "technologies": ["JavaScript", "HTML", "CSS", "Node.js"],
+        "technologies": [
+          "JavaScript",
+          "HTML",
+          "CSS",
+          "Node.js"
+        ],
         "viewProject": "View Project",
         "viewCode": "Code"
       },
       {
         "title": "Honda Racing",
         "description": "Website design for Honda's racing division, featuring a dynamic layout and social media integration.",
-        "technologies": ["JavaScript", "HTML", "Tailwind CSS", "Node.js"],
+        "technologies": [
+          "JavaScript",
+          "HTML",
+          "Tailwind CSS",
+          "Node.js"
+        ],
         "viewProject": "View Project",
         "viewCode": "Code"
       },
       {
         "title": "Honda Consórcio",
         "description": "Creation of a digital platform for Honda's motorcycle consortium, using Vue.js and TypeScript to ensure smooth and secure navigation. The design is responsive and optimized for various devices.",
-        "technologies": ["Vue.js", "TypeScript", "Tailwind CSS"],
+        "technologies": [
+          "Vue.js",
+          "TypeScript",
+          "Tailwind CSS"
+        ],
         "viewProject": "View Project",
         "viewCode": "Code"
       },
       {
         "title": "World Toilet Day - 2024 Edition",
         "description": "Development of the institutional website for the 2024 World Toilet Day edition, focusing on event information and multimedia content.",
-        "technologies": ["PHP", "WordPress", "HTML", "CSS"],
+        "technologies": [
+          "PHP",
+          "WordPress",
+          "HTML",
+          "CSS"
+        ],
         "viewProject": "View Project",
         "viewCode": "Code"
       },
       {
         "title": "World Toilet Day - 2023 Edition",
         "description": "Interactive platform for the 2023 World Toilet Day edition, promoting events and initiatives related to sanitation.",
-        "technologies": ["PHP", "WordPress", "HTML", "CSS"],
+        "technologies": [
+          "PHP",
+          "WordPress",
+          "HTML",
+          "CSS"
+        ],
         "viewProject": "View Project",
         "viewCode": "Code"
       },
       {
         "title": "World Toilet Day - 2022 Edition",
         "description": "Digital platform created to promote the 2022 World Toilet Day edition, with a modern design and smooth navigation.",
-        "technologies": ["PHP", "WordPress", "HTML", "CSS"],
+        "technologies": [
+          "PHP",
+          "WordPress",
+          "HTML",
+          "CSS"
+        ],
         "viewProject": "View Project",
         "viewCode": "Code"
       },
       {
         "title": "Water and Sanitation Institute",
         "description": "Institutional platform for the Water and Sanitation Institute, focusing on spreading content about basic sanitation in Brazil.",
-        "technologies": ["PHP", "WordPress", "HTML", "CSS"],
+        "technologies": [
+          "PHP",
+          "WordPress",
+          "HTML",
+          "CSS"
+        ],
         "viewProject": "View Project",
         "viewCode": "Code"
       },
       {
         "title": "Legal Framework for Sanitation Observatory",
         "description": "Development of an informative portal on the Legal Framework for Sanitation, featuring dynamic content and regular updates on sanitation data in Brazil.",
-        "technologies": ["PHP", "WordPress", "HTML", "CSS"],
+        "technologies": [
+          "PHP",
+          "WordPress",
+          "HTML",
+          "CSS"
+        ],
         "viewProject": "View Project",
         "viewCode": "Code"
       }

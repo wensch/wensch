@@ -1,26 +1,47 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Briefcase, 
+import {
+  Briefcase,
   GraduationCap,
-  Code2, 
-  GitBranch, 
-  Users, 
+  Code2,
+  Users,
   Rocket,
   TestTube,
-  GitPullRequest,
   Blocks,
-  Webhook,
   ChevronDown,
   Building2,
   Laptop,
   LineChart,
   Gauge,
-  BookOpen
+  BookOpen,
+  Layout,
+  Zap,
+  Repeat,
+  Network
 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const timeline = [
+  {
+    role: 'about.experience.seniorFrontendSafra.role',
+    company: 'about.experience.seniorFrontendSafra.company',
+    period: 'about.experience.seniorFrontendSafra.period',
+    type: 'about.experience.seniorFrontendSafra.type',
+    icon: Building2,
+    skills: [
+      { text: 'Angular', icon: Code2 },
+      { text: 'TypeScript', icon: Code2 },
+      { text: 'RxJS', icon: Repeat },
+      { text: 'Front-end Architecture', icon: Layout },
+      { text: 'Clean Code', icon: Code2 },
+      { text: 'SOLID', icon: Blocks },
+      { text: 'Design Patterns', icon: Layout },
+      { text: 'Performance', icon: Zap },
+      { text: 'Automated Testing', icon: TestTube },
+      { text: 'API Integration', icon: Network },
+    ],
+    highlights: 'about.experience.seniorFrontendSafra.highlights',
+  },
   {
     role: 'about.experience.techLead.role',
     company: 'about.experience.techLead.company',
@@ -163,7 +184,7 @@ export const About = () => {
         >
           {t('about.title')}
         </motion.h2>
-        
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -180,7 +201,7 @@ export const About = () => {
             <Briefcase className="h-5 w-5" />
             {t('about.career')}
           </h3>
-          
+
           <div className="space-y-4">
             {timeline.map((experience, index) => (
               <ExperienceCard
@@ -203,7 +224,7 @@ export const About = () => {
             <GraduationCap className="h-5 w-5" />
             {t('about.education.title')}
           </h3>
-          
+
           <div className="rounded-xl border border-[#2E2E2E] p-6 bg-[#2E2E2E]/20 backdrop-blur-sm">
             <div className="flex items-start gap-4">
               <div className="p-2 rounded-lg bg-[#7DE0FF] bg-opacity-10">
