@@ -1,5 +1,6 @@
-// Testes de integridade dos dados do portfólio (sem dependências: node --test).
-import { test } from 'node:test';
+// @vitest-environment node
+// Testes de integridade dos dados do portfólio (traduções, projetos e arquivos estáticos).
+import { test } from 'vitest';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
@@ -90,6 +91,26 @@ test('arquivos estáticos referenciados existem (CVs e ícones)', () => {
   }
   const html = read('index.html');
   for (const [, href] of html.matchAll(/href="(\/favicon_io\/[^"]+)"/g)) {
-    assert.ok(existsSync(join(root, href.slice(1))), `faltando ${href}`);
+    assert.ok(existsSync(join(root, 'public', href.slice(1))), `faltando ${href}`);
   }
+  for (const [, file] of html.matchAll(/content="https:\/\/wensch\.dev\.br\/([^"]+\.(?:jpg|png))"/g)) {
+    assert.ok(existsSync(join(root, 'public', file)), `imagem de compartilhamento ausente: ${file}`);
+  }
+  const manifest = JSON.parse(read('public/favicon_io/site.webmanifest'));
+  assert.ok(manifest.name?.trim(), 'manifest sem nome');
+  for (const icon of manifest.icons) {
+    assert.ok(existsSync(join(root, 'public', icon.src)), `ícone do manifest ausente: ${icon.src}`);
+  }
+});
+
+test('vercel.json: headers de segurança presentes e CSP sem unsafe-eval', () => {
+  const config = JSON.parse(read('vercel.json'));
+  const all = config.headers.find((h) => h.source === '/(.*)').headers;
+  const names = all.map((h) => h.key);
+  for (const key of ['X-Content-Type-Options', 'Referrer-Policy', 'X-Frame-Options', 'Content-Security-Policy']) {
+    assert.ok(names.includes(key), `faltando header ${key}`);
+  }
+  const csp = all.find((h) => h.key === 'Content-Security-Policy').value;
+  assert.ok(csp.includes("frame-ancestors 'none'"));
+  assert.ok(!csp.includes('unsafe-eval'));
 });
