@@ -155,10 +155,10 @@
         "description": "This is my personal portfolio, designed to showcase my projects and skills. I aimed to provide an intuitive and responsive experience, optimized to highlight my journey as a developer and make it easy to explore my work.",
         "technologies": [
           "React",
-          "Next",
+          "Vite",
           "Tailwind CSS",
-          "Typescript",
-          "Node.js"
+          "TypeScript",
+          "Framer Motion"
         ],
         "viewProject": "View Project",
         "viewCode": "Code"

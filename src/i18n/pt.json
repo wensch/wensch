@@ -155,10 +155,10 @@
         "description": "Este é meu portfólio pessoal, criado para exibir meus projetos e habilidades. Busquei oferecer uma experiência intuitiva e responsiva, otimizada para mostrar minha jornada como desenvolvedor e facilitar a visualização do meu trabalho.",
         "technologies": [
           "React",
-          "Next",
+          "Vite",
           "Tailwind CSS",
-          "Typescript",
-          "Node.js"
+          "TypeScript",
+          "Framer Motion"
         ],
         "viewProject": "Ver Projeto",
         "viewCode": "Código"

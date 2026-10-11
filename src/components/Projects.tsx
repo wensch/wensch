@@ -15,72 +15,72 @@ const projects = [
     image: '/img/sites/Lumi.webp',
     liveUrl: 'https://github.com/wensch/lumi',
     isRepo: true,
-    gradient: 'from-[#FFB59C] to-[#FFE7A0]',
+    colors: ['#FFB59C', '#FFE7A0'],
   },
   {
     image: '/img/sites/CrunchySync.webp',
     liveUrl: 'https://github.com/wensch/anime-fila',
     isRepo: true,
-    gradient: 'from-[#F47521] to-[#FF8E53]',
+    colors: ['#F47521', '#FF8E53'],
   },
   {
     image: '/img/sites/Addiction_Catalog.webp',
     liveUrl: 'https://catalog.wensch.dev.br',
-    gradient: 'from-[#6C5CE7] to-[#38bdf8]',
+    colors: ['#6C5CE7', '#38bdf8'],
   },
   {
     image: '/img/sites/Portifolio.webp',
     liveUrl: 'https://wensch.dev.br',
     githubUrl: 'https://github.com',
-    gradient: 'from-[#FF6B6B] to-[#FF8E53]',
+    colors: ['#FF6B6B', '#FF8E53'],
   },
   {
     image: '/img/sites/Honda_Motos_1.webp',
     liveUrl: 'https://www.honda.com.br/motos/',
     githubUrl: 'https://github.com',
-    gradient: 'from-[#FF6B6B] to-[#FF8E53]',
+    colors: ['#FF6B6B', '#FF8E53'],
   },
   {
     image: '/img/sites/Honda_Racing_1.webp',
     liveUrl: 'https://www.honda.com.br/racing/',
     githubUrl: 'https://github.com',
-    gradient: 'from-[#4A90E2] to-[#67B26F]',
+    colors: ['#4A90E2', '#67B26F'],
   },
   {
     image: '/img/sites/Honda_Concessionaria_1.webp',
     liveUrl: 'https://www.honda.com.br/motos/concessionarias',
     githubUrl: 'https://github.com',
-    gradient: 'from-[#6C5CE7] to-[#a855f7]',
+    colors: ['#6C5CE7', '#a855f7'],
   },
   {
     image: '/img/sites/DMB-1.webp',
     liveUrl: 'https://diamundialdobanheiro.org.br/',
     githubUrl: 'https://github.com',
-    gradient: 'from-[#FF6B6B] to-[#FF8E53]',
+    colors: ['#FF6B6B', '#FF8E53'],
   },
   {
     image: '/img/sites/DMB-2.webp',
     liveUrl: 'https://diamundialdobanheiro.org.br/edicao-2023/',
     githubUrl: '#',
-    gradient: 'from-[#4A90E2] to-[#67B26F]',
+    colors: ['#4A90E2', '#67B26F'],
   },
   {
     image: '/img/sites/DMB-3.webp',
     liveUrl: 'https://diamundialdobanheiro.org.br/edicao-2022/',
     githubUrl: 'https://github.com',
-    gradient: 'from-[#6C5CE7] to-[#a855f7]',
+    colors: ['#6C5CE7', '#a855f7'],
   },
   {
     image: '/img/sites/IAS.webp',
     liveUrl: 'https://www.aguaesaneamento.org.br/',
     githubUrl: 'https://github.com',
-    gradient: 'from-[#4A90E2] to-[#67B26F]',
+    colors: ['#4A90E2', '#67B26F'],
   },
   {
     image: '/img/sites/Marco_Legal.webp',
     liveUrl: 'https://marcolegal.aguaesaneamento.org.br/',
     githubUrl: 'https://github.com',
-    gradient: 'from-[#6C5CE7] to-[#a855f7]',
+    colors: ['#6C5CE7', '#a855f7'],
   },
 ];
 
@@ -122,7 +122,7 @@ export const Projects = () => {
               <div className="relative p-6">
                 <div className="absolute inset-0 bg-gradient-to-br opacity-5 transition-opacity duration-300 group-hover:opacity-10"
                   style={{
-                    backgroundImage: `linear-gradient(to bottom right, ${projects[index].gradient.split('from-')[1].split(' ')[0]}, ${projects[index].gradient.split('to-')[1]})`,
+                    backgroundImage: `linear-gradient(to bottom right, ${projects[index].colors[0]}, ${projects[index].colors[1]})`,
                   }}
                 />
                 <div className="relative z-10">

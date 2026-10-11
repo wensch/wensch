@@ -31,8 +31,6 @@ const skillCategories = [
       'Angular',
       'Next.js',
       'Nuxt.js',
-      'Node.js',
-      'Jest',
       'TDD',
       'PHP',
       'WordPress',
