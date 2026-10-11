@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useEffect, useMemo, useState } from 'react';
+import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
 export const RotatingText = () => {
@@ -8,16 +8,19 @@ export const RotatingText = () => {
   const [isTyping, setIsTyping] = useState(true);
   const { t } = useTranslation();
 
-  const roles = [
-    t('hero.roles.frontend'),
-    t('hero.roles.techlead'),
-    t('hero.roles.cleancode'),
-    t('hero.roles.uiux'),
-    t('hero.roles.architecture')
-  ];
+  const roles = useMemo(
+    () => [
+      t('hero.roles.frontend'),
+      t('hero.roles.techlead'),
+      t('hero.roles.cleancode'),
+      t('hero.roles.uiux'),
+      t('hero.roles.architecture'),
+    ],
+    [t]
+  );
 
   useEffect(() => {
-    let timeout: NodeJS.Timeout;
+    let timeout: ReturnType<typeof setTimeout> | undefined;
     const currentText = roles[currentIndex];
     
     if (isTyping && displayText !== currentText) {

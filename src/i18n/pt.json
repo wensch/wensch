@@ -91,58 +91,22 @@
     "title": "Habilidades",
     "categories": {
       "frontend": {
-        "title": "Frontend",
-        "skills": [
-          "HTML",
-          "CSS",
-          "Sass",
-          "Tailwind",
-          "Styled Components",
-          "Storybook"
-        ]
+        "title": "Frontend"
       },
       "programming": {
-        "title": "Programação",
-        "skills": [
-          "JavaScript",
-          "TypeScript",
-          "React",
-          "Vue.js",
-          "Angular",
-          "Next.js",
-          "Nuxt.js",
-          "Node.js",
-          "Jest"
-        ]
+        "title": "Programação"
+      },
+      "backend": {
+        "title": "Backend e Banco de Dados"
+      },
+      "testing": {
+        "title": "Testes e Qualidade"
       },
       "devops": {
-        "title": "DevOps",
-        "skills": [
-          "Docker",
-          "Git",
-          "CI/CD",
-          "AWS"
-        ]
+        "title": "DevOps"
       },
-      "database": {
-        "title": "Banco de Dados",
-        "skills": [
-          "MySQL",
-          "SQL",
-          "MongoDB",
-          "PostgreSQL"
-        ]
-      },
-      "others": {
-        "title": "Outros",
-        "skills": [
-          "PHP",
-          "WordPress",
-          "SEO",
-          "Agile (Kanban/Scrum)",
-          "REST APIs",
-          "GraphQL"
-        ]
+      "agile": {
+        "title": "Metodologias Ágeis"
       }
     }
   },
@@ -150,14 +114,51 @@
     "title": "Projetos",
     "items": [
       {
+        "title": "Lumi",
+        "description": "App mobile de constância devocional cristã: ajuda a manter o hábito diário de oração e leitura da Bíblia com streak, XP, conquistas, lembretes e o mascote Lumi, que reage ao seu progresso. Bíblia integrada via YouVersion, backend em Supabase e interface em português e inglês.",
+        "technologies": [
+          "React Native",
+          "Expo",
+          "TypeScript",
+          "Supabase"
+        ],
+        "viewProject": "Ver no GitHub",
+        "viewCode": "Código"
+      },
+      {
+        "title": "CrunchySync",
+        "description": "App Android para gerenciar o histórico da Crunchyroll direto do celular, sem servidor próprio: histórico agrupado por série, filtros, remoção em massa com conferência final e atualização do app por dentro. O login acontece na página oficial, então o app nunca vê sua senha.",
+        "technologies": [
+          "Angular",
+          "Capacitor",
+          "Tailwind CSS",
+          "TypeScript"
+        ],
+        "viewProject": "Ver no GitHub",
+        "viewCode": "Código"
+      },
+      {
+        "title": "Addiction Catalog",
+        "description": "Aplicativo web (PWA) para quem vive de anime: radar da temporada, listas de acompanhamento, tier list, importação do MyAnimeList, recomendações com IA (Gemini) e cartas colecionáveis para compartilhar o seu perfil.",
+        "technologies": [
+          "React",
+          "TypeScript",
+          "Supabase",
+          "Tailwind CSS",
+          "Gemini AI"
+        ],
+        "viewProject": "Ver Projeto",
+        "viewCode": "Código"
+      },
+      {
         "title": "Wensch.dev",
         "description": "Este é meu portfólio pessoal, criado para exibir meus projetos e habilidades. Busquei oferecer uma experiência intuitiva e responsiva, otimizada para mostrar minha jornada como desenvolvedor e facilitar a visualização do meu trabalho.",
         "technologies": [
           "React",
-          "Next",
+          "Vite",
           "Tailwind CSS",
-          "Typescript",
-          "Node.js"
+          "TypeScript",
+          "Framer Motion"
         ],
         "viewProject": "Ver Projeto",
         "viewCode": "Código"
@@ -262,6 +263,13 @@
   "contact": {
     "title": "Contato",
     "description": "Interessado em trabalhar juntos? Entre em contato!",
-    "button": "Entre em Contato"
+    "button": "Entre em Contato",
+    "whatsappMessage": "Olá, vim através do seu portfólio e gostaria de conversar."
+  },
+  "a11y": {
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu",
+    "switchLanguage": "Mudar idioma",
+    "backToTop": "Voltar ao topo"
   }
 }

@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X, Languages, FileDown } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { getAppLanguage } from '../i18n';
 
 const menuItems = [
   { label: 'header.home', href: '#home' },
@@ -16,32 +17,50 @@ export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t, i18n } = useTranslation();
 
+  const isPt = getAppLanguage() === 'pt';
+
   const toggleLanguage = () => {
-    const newLang = i18n.language === 'pt' ? 'en' : 'pt';
-    i18n.changeLanguage(newLang);
+    i18n.changeLanguage(isPt ? 'en' : 'pt');
   };
 
-  const pdfLink = i18n.language === 'pt' 
-    ? '/files/mateus-wensch-cv-pt.pdf' 
+  const pdfLink = isPt
+    ? '/files/mateus-wensch-cv-pt.pdf'
     : '/files/mateus-wensch-cv-en.pdf';
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
+    // Seção ativa = a última cuja borda superior já passou de 40% da tela.
+    // (Um IntersectionObserver com threshold 0.5 nunca dispara em seções mais
+    // altas que 2x a tela, como Sobre e Projetos.)
+    const updateActiveSection = () => {
+      const sections = Array.from(document.querySelectorAll('section[id]'));
+      if (sections.length === 0) return;
+
+      const reachedBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 4;
+      let current = sections[0].id;
+
+      if (reachedBottom) {
+        current = sections[sections.length - 1].id;
+      } else {
+        for (const section of sections) {
+          if (section.getBoundingClientRect().top <= window.innerHeight * 0.4) {
+            current = section.id;
           }
-        });
-      },
-      { threshold: 0.5 }
-    );
+        }
+      }
 
-    document.querySelectorAll('section[id]').forEach((section) => {
-      observer.observe(section);
-    });
+      setActiveSection(current);
+    };
 
-    return () => observer.disconnect();
+    updateActiveSection();
+    window.addEventListener('scroll', updateActiveSection, { passive: true });
+    window.addEventListener('resize', updateActiveSection);
+
+    return () => {
+      window.removeEventListener('scroll', updateActiveSection);
+      window.removeEventListener('resize', updateActiveSection);
+    };
   }, []);
 
   return (
@@ -51,6 +70,8 @@ export const Header = () => {
         <button
           className="lg:hidden text-gray hover:text-primary"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label={t(isMenuOpen ? 'a11y.closeMenu' : 'a11y.openMenu')}
+          aria-expanded={isMenuOpen}
         >
           {isMenuOpen ? (
             <X className="h-4 w-4" />
@@ -88,6 +109,7 @@ export const Header = () => {
           <a
             href={pdfLink}
             download
+            aria-label={t('header.downloadCV')}
             className="flex items-center gap-2 rounded-full border border-[rgb(221,155,255)]/50 px-3 py-1.5 text-[rgb(221,155,255)] text-sm transition-all duration-300 hover:border-[rgb(221,155,255)] hover:bg-[rgb(221,155,255)]/5"
           >
             <FileDown className="h-4 w-4" />
@@ -96,11 +118,12 @@ export const Header = () => {
 
           <button
             onClick={toggleLanguage}
+            aria-label={t('a11y.switchLanguage')}
             className="flex items-center gap-1.5 text-gray hover:text-[rgb(221,155,255)] transition-colors text-sm"
           >
             <Languages className="h-4 w-4" />
             <span className="hidden sm:inline">
-              {i18n.language === 'pt' ? 'EN' : 'PT'}
+              {isPt ? 'EN' : 'PT'}
             </span>
           </button>
         </div>

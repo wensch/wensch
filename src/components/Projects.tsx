@@ -1,68 +1,92 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Github, Code2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
+interface ProjectItem {
+  title: string;
+  description: string;
+  technologies: string[];
+  viewProject: string;
+  viewCode: string;
+}
+
 const projects = [
   {
-    image: '/img/sites/Portifolio.png',
+    image: '/img/sites/Lumi.webp',
+    liveUrl: 'https://github.com/wensch/lumi',
+    isRepo: true,
+    colors: ['#FFB59C', '#FFE7A0'],
+  },
+  {
+    image: '/img/sites/CrunchySync.webp',
+    liveUrl: 'https://github.com/wensch/anime-fila',
+    isRepo: true,
+    colors: ['#F47521', '#FF8E53'],
+  },
+  {
+    image: '/img/sites/Addiction_Catalog.webp',
+    liveUrl: 'https://catalog.wensch.dev.br',
+    colors: ['#6C5CE7', '#38bdf8'],
+  },
+  {
+    image: '/img/sites/Portifolio.webp',
     liveUrl: 'https://wensch.dev.br',
     githubUrl: 'https://github.com',
-    gradient: 'from-[#FF6B6B] to-[#FF8E53]',
+    colors: ['#FF6B6B', '#FF8E53'],
   },
   {
-    image: '/img/sites/Honda_Motos_1.png',
+    image: '/img/sites/Honda_Motos_1.webp',
     liveUrl: 'https://www.honda.com.br/motos/',
     githubUrl: 'https://github.com',
-    gradient: 'from-[#FF6B6B] to-[#FF8E53]',
+    colors: ['#FF6B6B', '#FF8E53'],
   },
   {
-    image: '/img/sites/Honda_Racing_1.png',
+    image: '/img/sites/Honda_Racing_1.webp',
     liveUrl: 'https://www.honda.com.br/racing/',
     githubUrl: 'https://github.com',
-    gradient: 'from-[#4A90E2] to-[#67B26F]',
+    colors: ['#4A90E2', '#67B26F'],
   },
   {
-    image: '/img/sites/Honda_Concessionaria_1.png',
+    image: '/img/sites/Honda_Concessionaria_1.webp',
     liveUrl: 'https://www.honda.com.br/motos/concessionarias',
     githubUrl: 'https://github.com',
-    gradient: 'from-[#6C5CE7] to-[#a855f7]',
+    colors: ['#6C5CE7', '#a855f7'],
   },
   {
-    image: '/img/sites/DMB-1.png',
+    image: '/img/sites/DMB-1.webp',
     liveUrl: 'https://diamundialdobanheiro.org.br/',
     githubUrl: 'https://github.com',
-    gradient: 'from-[#FF6B6B] to-[#FF8E53]',
+    colors: ['#FF6B6B', '#FF8E53'],
   },
   {
-    image: '/img/sites/DMB-2.png',
+    image: '/img/sites/DMB-2.webp',
     liveUrl: 'https://diamundialdobanheiro.org.br/edicao-2023/',
     githubUrl: '#',
-    gradient: 'from-[#4A90E2] to-[#67B26F]',
+    colors: ['#4A90E2', '#67B26F'],
   },
   {
-    image: '/img/sites/DMB-3.png',
+    image: '/img/sites/DMB-3.webp',
     liveUrl: 'https://diamundialdobanheiro.org.br/edicao-2022/',
     githubUrl: 'https://github.com',
-    gradient: 'from-[#6C5CE7] to-[#a855f7]',
+    colors: ['#6C5CE7', '#a855f7'],
   },
   {
-    image: '/img/sites/IAS.png',
+    image: '/img/sites/IAS.webp',
     liveUrl: 'https://www.aguaesaneamento.org.br/',
     githubUrl: 'https://github.com',
-    gradient: 'from-[#4A90E2] to-[#67B26F]',
+    colors: ['#4A90E2', '#67B26F'],
   },
   {
-    image: '/img/sites/Marco_Legal.png',
+    image: '/img/sites/Marco_Legal.webp',
     liveUrl: 'https://marcolegal.aguaesaneamento.org.br/',
     githubUrl: 'https://github.com',
-    gradient: 'from-[#6C5CE7] to-[#a855f7]',
+    colors: ['#6C5CE7', '#a855f7'],
   },
 ];
 
 export const Projects = () => {
   const { t } = useTranslation();
-  const projectItems = t('projects.items', { returnObjects: true });
+  const projectItems = t('projects.items', { returnObjects: true }) as unknown as ProjectItem[];
 
   return (
     <section id="projects" className="min-h-screen py-20">
@@ -77,7 +101,7 @@ export const Projects = () => {
         </motion.h2>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {projectItems.map((project: any, index: number) => (
+          {projectItems.map((project, index) => (
             <motion.div
               key={project.title}
               initial={{ opacity: 0, y: 20 }}
@@ -90,13 +114,15 @@ export const Projects = () => {
                 <img
                   src={projects[index].image}
                   alt={project.title}
+                  loading="lazy"
+                  decoding="async"
                   className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
               </div>
               <div className="relative p-6">
                 <div className="absolute inset-0 bg-gradient-to-br opacity-5 transition-opacity duration-300 group-hover:opacity-10"
                   style={{
-                    backgroundImage: `linear-gradient(to bottom right, ${projects[index].gradient.split('from-')[1].split(' ')[0]}, ${projects[index].gradient.split('to-')[1]})`,
+                    backgroundImage: `linear-gradient(to bottom right, ${projects[index].colors[0]}, ${projects[index].colors[1]})`,
                   }}
                 />
                 <div className="relative z-10">
@@ -124,7 +150,11 @@ export const Projects = () => {
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 rounded-full bg-gradient-to-r from-accent to-primary px-4 py-2 text-sm text-white transition-all duration-300 hover:shadow-lg hover:shadow-accent/25 hover:-translate-y-0.5"
                     >
-                      <ExternalLink className="h-4 w-4" />
+                      {projects[index].isRepo ? (
+                        <Github className="h-4 w-4" />
+                      ) : (
+                        <ExternalLink className="h-4 w-4" />
+                      )}
                       {project.viewProject}
                     </a>
                     {/* <a

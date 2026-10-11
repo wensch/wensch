@@ -1,10 +1,10 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { Code2, Palette, Server, Database, Wrench, CheckCircle, Repeat } from 'lucide-react';
+import { Code2, Palette, Server, Database, CheckCircle, Repeat } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const skillCategories = [
   {
-    title: 'Frontend',
+    id: 'frontend',
     icon: Palette, // Ícone para Frontend
     skills: [
       'HTML',
@@ -21,7 +21,7 @@ const skillCategories = [
     color: '#A566FF',
   },
   {
-    title: 'Programming',
+    id: 'programming',
     icon: Code2, // Ícone para Programação
     skills: [
       'JavaScript',
@@ -31,8 +31,6 @@ const skillCategories = [
       'Angular',
       'Next.js',
       'Nuxt.js',
-      'Node.js',
-      'Jest',
       'TDD',
       'PHP',
       'WordPress',
@@ -40,7 +38,7 @@ const skillCategories = [
     color: '#FFA94D',
   },
   {
-    title: 'Backend & Database',
+    id: 'backend',
     icon: Database, // Ícone para Backend e Bancos de Dados
     skills: [
       'Node.js',
@@ -58,7 +56,7 @@ const skillCategories = [
     color: '#6CC644',
   },
   {
-    title: 'Testing & Quality',
+    id: 'testing',
     icon: CheckCircle, // Ícone para Testes e Qualidade
     skills: [
       'Cypress',
@@ -67,7 +65,7 @@ const skillCategories = [
     color: '#FF6B6B',
   },
   {
-    title: 'DevOps',
+    id: 'devops',
     icon: Server, // Ícone para DevOps
     skills: [
       'Docker',
@@ -82,7 +80,7 @@ const skillCategories = [
     color: '#4D96FF',
   },
   {
-    title: 'Agile Methodologies',
+    id: 'agile',
     icon: Repeat, // Ícone para Metodologias Ágeis
     skills: [
       'Agile/Scrum',
@@ -92,9 +90,9 @@ const skillCategories = [
   }
 ];
 
-export default skillCategories;
-
 export const Skills = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="skills" className="min-h-screen py-20">
       <div className="mx-auto max-w-6xl px-4">
@@ -104,13 +102,13 @@ export const Skills = () => {
           viewport={{ once: true }}
           className="mb-12 text-center text-3xl font-bold text-[#9238ff]"
         >
-          Skills
+          {t('skills.title')}
         </motion.h2>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
-              key={category.title}
+              key={category.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -127,7 +125,7 @@ export const Skills = () => {
                     <category.icon className="h-5 w-5 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-[#dd9bff]">
-                    {category.title}
+                    {t(`skills.categories.${category.id}.title`)}
                   </h3>
                 </div>
                 <div className="flex flex-wrap gap-2">
