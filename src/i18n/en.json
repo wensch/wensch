@@ -91,55 +91,22 @@
     "title": "Skills",
     "categories": {
       "frontend": {
-        "title": "Frontend",
-        "skills": [
-          "HTML",
-          "CSS",
-          "Sass",
-          "Tailwind",
-          "Styled Components",
-          "Storybook"
-        ]
+        "title": "Frontend"
       },
       "programming": {
-        "title": "Programming",
-        "skills": [
-          "JavaScript",
-          "TypeScript",
-          "React",
-          "Vue.js",
-          "Node.js",
-          "Jest"
-        ]
+        "title": "Programming"
+      },
+      "backend": {
+        "title": "Backend & Database"
+      },
+      "testing": {
+        "title": "Testing & Quality"
       },
       "devops": {
-        "title": "DevOps",
-        "skills": [
-          "Docker",
-          "Git",
-          "CI/CD",
-          "AWS"
-        ]
+        "title": "DevOps"
       },
-      "database": {
-        "title": "Database",
-        "skills": [
-          "MySQL",
-          "SQL",
-          "MongoDB",
-          "PostgreSQL"
-        ]
-      },
-      "others": {
-        "title": "Others",
-        "skills": [
-          "PHP",
-          "WordPress",
-          "SEO",
-          "Agile (Kanban/Scrum)",
-          "REST APIs",
-          "GraphQL"
-        ]
+      "agile": {
+        "title": "Agile Methodologies"
       }
     }
   },
@@ -296,6 +263,13 @@
   "contact": {
     "title": "Contact",
     "description": "Interested in working together? Get in touch!",
-    "button": "Get in Touch"
+    "button": "Get in Touch",
+    "whatsappMessage": "Hi, I came through your portfolio and would like to talk."
+  },
+  "a11y": {
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "switchLanguage": "Change language",
+    "backToTop": "Back to top"
   }
 }

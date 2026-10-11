@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Github, Linkedin, Phone } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
@@ -7,7 +6,7 @@ export const Contact = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="contact" className="h-[50vh] py-20 flex items-center">
+    <section id="contact" className="min-h-[50vh] py-20 flex items-center">
       <div className="mx-auto max-w-4xl px-4 text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -39,6 +38,7 @@ export const Contact = () => {
         <div className="flex justify-center gap-8">
           <motion.a
             href="https://github.com/wensch"
+            aria-label="GitHub"
             target="_blank"
             rel="noopener noreferrer"
             initial={{ opacity: 0, y: 20 }}
@@ -50,6 +50,7 @@ export const Contact = () => {
           </motion.a>
           <motion.a
             href="https://www.linkedin.com/in/mateus-wensch-5a822411a/"
+            aria-label="LinkedIn"
             target="_blank"
             rel="noopener noreferrer"
             initial={{ opacity: 0, y: 20 }}
@@ -61,7 +62,8 @@ export const Contact = () => {
             <Linkedin className="h-6 w-6" />
           </motion.a>
           <motion.a
-            href="https://wa.me/5511993218514?text=Ol%C3%A1%20vim%20atrav%C3%A9s%20do%20seu%20portif%C3%B3lio%20e%20gostaria%20de%20conversar."
+            href={`https://wa.me/5511993218514?text=${encodeURIComponent(t('contact.whatsappMessage'))}`}
+            aria-label="WhatsApp"
             target="_blank"
             rel="noopener noreferrer"
             initial={{ opacity: 0, y: 20 }}

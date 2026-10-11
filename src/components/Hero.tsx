@@ -1,12 +1,8 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { RotatingText } from './RotatingText';
 import { TechStack } from './TechStack';
-import { useTranslation } from 'react-i18next';
 
 export const Hero = () => {
-  const { t } = useTranslation();
-
   return (
     <section
       id="home"

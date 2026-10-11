@@ -22,4 +22,16 @@ i18n
     },
   });
 
+// i18n.language pode ser uma variante (ex.: "pt-BR"); resolvedLanguage é o idioma
+// de fato carregado ("pt" ou "en").
+export const getAppLanguage = (): 'pt' | 'en' =>
+  i18n.resolvedLanguage === 'en' ? 'en' : 'pt';
+
+const syncHtmlLang = () => {
+  document.documentElement.lang = getAppLanguage();
+};
+if (i18n.isInitialized) syncHtmlLang();
+i18n.on('initialized', syncHtmlLang);
+i18n.on('languageChanged', syncHtmlLang);
+
 export default i18n;

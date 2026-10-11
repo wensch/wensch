@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState, type ReactNode } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Briefcase,
@@ -88,7 +88,28 @@ const timeline = [
   },
 ];
 
-const ExperienceCard = ({ experience, isOpen, onToggle }: any) => {
+type Experience = (typeof timeline)[number];
+
+// Os textos em pt/en usam <b>...</b> para destacar o início do item; renderiza
+// como <strong> sem usar dangerouslySetInnerHTML.
+const renderHighlight = (text: string): ReactNode[] =>
+  text.split(/(<b>.*?<\/b>)/g).map((part, index) =>
+    part.startsWith('<b>') ? (
+      <strong key={index} className="font-semibold text-white">
+        {part.slice(3, -4)}
+      </strong>
+    ) : (
+      part
+    )
+  );
+
+interface ExperienceCardProps {
+  experience: Experience;
+  isOpen: boolean;
+  onToggle: () => void;
+}
+
+const ExperienceCard = ({ experience, isOpen, onToggle }: ExperienceCardProps) => {
   const { t } = useTranslation();
   const highlights = t(experience.highlights, { returnObjects: true }) as string[];
 
@@ -100,6 +121,7 @@ const ExperienceCard = ({ experience, isOpen, onToggle }: any) => {
     >
       <button
         onClick={onToggle}
+        aria-expanded={isOpen}
         className="w-full px-6 py-4 flex items-center justify-between text-left"
       >
         <div className="flex items-start gap-4">
@@ -137,7 +159,7 @@ const ExperienceCard = ({ experience, isOpen, onToggle }: any) => {
           >
             <div className="px-6 pb-6">
               <div className="mb-6 flex flex-wrap gap-2">
-                {experience.skills.map((skill: any, skillIndex: number) => (
+                {experience.skills.map((skill, skillIndex) => (
                   <span
                     key={skillIndex}
                     className="inline-flex items-center gap-1 rounded-full bg-[#FF77E0]/10 px-3 py-1 text-sm text-white border border-[#FF77E0]/20"
@@ -149,14 +171,14 @@ const ExperienceCard = ({ experience, isOpen, onToggle }: any) => {
               </div>
 
               <div className="space-y-3">
-                {highlights.map((highlight: string, highlightIndex: number) => (
+                {highlights.map((highlight, highlightIndex) => (
                   <div
                     key={highlightIndex}
                     className="flex items-start gap-3 text-gray-300 hover:text-white transition-colors duration-200"
                   >
                     <Rocket className="h-5 w-5 mt-0.5 text-[#7DE0FF] opacity-60" />
                     <p className="text-sm leading-relaxed">
-                      {highlight}
+                      {renderHighlight(highlight)}
                     </p>
                   </div>
                 ))}

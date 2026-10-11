@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 interface Particle {
   x: number;
@@ -10,7 +10,9 @@ interface Particle {
 
 export const ParticleBackground = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const mouseRef = useRef({ x: 0, y: 0 });
+  // Começa fora da tela: sem isso, em telas de toque (sem mousemove) as partículas
+  // são atraídas para o canto superior esquerdo.
+  const mouseRef = useRef({ x: -9999, y: -9999 });
   const particlesRef = useRef<Particle[]>([]);
 
   useEffect(() => {
@@ -38,6 +40,8 @@ export const ParticleBackground = () => {
       }
     };
 
+    let frameId = 0;
+
     const animate = () => {
       ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -47,7 +51,7 @@ export const ParticleBackground = () => {
         const dy = mouseRef.current.y - particle.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
 
-        if (distance < 100) {
+        if (distance > 0 && distance < 100) {
           particle.x += (dx / distance) * 2;
           particle.y += (dy / distance) * 2;
         }
@@ -66,7 +70,7 @@ export const ParticleBackground = () => {
         ctx.fill();
       });
 
-      requestAnimationFrame(animate);
+      frameId = requestAnimationFrame(animate);
     };
 
     const handleMouseMove = (e: MouseEvent) => {
@@ -84,6 +88,7 @@ export const ParticleBackground = () => {
     animate();
 
     return () => {
+      cancelAnimationFrame(frameId);
       window.removeEventListener('resize', resizeCanvas);
       window.removeEventListener('mousemove', handleMouseMove);
     };
