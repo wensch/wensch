@@ -5,6 +5,23 @@ import { useTranslation } from 'react-i18next';
 
 const projects = [
   {
+    image: '/img/sites/Lumi.png',
+    liveUrl: 'https://github.com/wensch/lumi',
+    isRepo: true,
+    gradient: 'from-[#FFB59C] to-[#FFE7A0]',
+  },
+  {
+    image: '/img/sites/CrunchySync.png',
+    liveUrl: 'https://github.com/wensch/anime-fila',
+    isRepo: true,
+    gradient: 'from-[#F47521] to-[#FF8E53]',
+  },
+  {
+    image: '/img/sites/Addiction_Catalog.png',
+    liveUrl: 'https://catalog.wensch.dev.br',
+    gradient: 'from-[#6C5CE7] to-[#38bdf8]',
+  },
+  {
     image: '/img/sites/Portifolio.png',
     liveUrl: 'https://wensch.dev.br',
     githubUrl: 'https://github.com',
@@ -124,7 +141,11 @@ export const Projects = () => {
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 rounded-full bg-gradient-to-r from-accent to-primary px-4 py-2 text-sm text-white transition-all duration-300 hover:shadow-lg hover:shadow-accent/25 hover:-translate-y-0.5"
                     >
-                      <ExternalLink className="h-4 w-4" />
+                      {projects[index].isRepo ? (
+                        <Github className="h-4 w-4" />
+                      ) : (
+                        <ExternalLink className="h-4 w-4" />
+                      )}
                       {project.viewProject}
                     </a>
                     {/* <a

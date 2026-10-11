@@ -147,6 +147,43 @@
     "title": "Projects",
     "items": [
       {
+        "title": "Lumi",
+        "description": "Mobile app for Christian devotional consistency: it helps users keep a daily habit of prayer and Bible reading with streaks, XP, achievements, reminders and the Lumi mascot, which reacts to their progress. Bible integrated through YouVersion, Supabase backend and a Portuguese/English interface.",
+        "technologies": [
+          "React Native",
+          "Expo",
+          "TypeScript",
+          "Supabase"
+        ],
+        "viewProject": "View on GitHub",
+        "viewCode": "Code"
+      },
+      {
+        "title": "CrunchySync",
+        "description": "Android app to manage your Crunchyroll watch history straight from your phone, with no server of its own: history grouped by series, filters, bulk removal with a final check, and in-app updates. Sign-in happens on the official page, so the app never sees your password.",
+        "technologies": [
+          "Angular",
+          "Capacitor",
+          "Tailwind CSS",
+          "TypeScript"
+        ],
+        "viewProject": "View on GitHub",
+        "viewCode": "Code"
+      },
+      {
+        "title": "Addiction Catalog",
+        "description": "Web app (PWA) for anime fans: seasonal radar, watch lists, tier list, MyAnimeList import, AI recommendations (Gemini) and collectible cards to share your profile.",
+        "technologies": [
+          "React",
+          "TypeScript",
+          "Supabase",
+          "Tailwind CSS",
+          "Gemini AI"
+        ],
+        "viewProject": "View Project",
+        "viewCode": "Code"
+      },
+      {
         "title": "Wensch.dev",
         "description": "This is my personal portfolio, designed to showcase my projects and skills. I aimed to provide an intuitive and responsive experience, optimized to highlight my journey as a developer and make it easy to explore my work.",
         "technologies": [
